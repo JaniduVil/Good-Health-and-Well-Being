@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web CourseWork</title>
+  <link rel="stylesheet" href="SplashScreen.css" >
+
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div class="splash-screen" id="splashScreen">
+    <div>
+      <h1 style="text-align: center;">Digital Health and Well-Being</h1>
+       
+      <ul style="font-size: 20px; text-align: center;">
+        Group Members
+        <li>Janidu Jayasundara</li>
+        <li>Nirmal Ranasinghe</li>
+        <li>Detuni Amaya</li>
+        <li>Sandanima Fernando</li>
+      </ul>
+    
+    
+    </div>
+    <div class="loader"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent">
+    <h1>Main Content</h1>
+    <p>This is the main content of the website.</p>
+  </div>
+
+  <script>
+    // Wait for the DOM to load
+    document.addEventListener("DOMContentLoaded", () => {
+      const splashScreen = document.getElementById("splashScreen");
+      const mainContent = document.getElementById("mainContent");
+
+      // Hide splash screen after 3 seconds
+      setTimeout(() => {
+        splashScreen.classList.add("fade-out");
+        setTimeout(() => {
+          splashScreen.style.display = "none";
+          mainContent.style.display = "block";
+        }, 1000); // Match the fade-out animation duration
+      }, 40000); // Delay in milliseconds
+    });
+  </script>
+</body>
+</html>
