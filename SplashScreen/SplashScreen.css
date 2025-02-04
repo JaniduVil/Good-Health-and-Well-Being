@@ -15,8 +15,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: #4CAF50;  */
-    background-image: url("./image1.png");
+    background-color: #4CAF50; 
+    /* background-image: url("./image1.png"); */
     background-position: center;
     background-size: cover;
     color: white;
