@@ -14,7 +14,8 @@ nav, footer {
 
 /* Rest of your CSS */
 :root {
-    --primary-color: #3e7c40;
+    /* --primary-color: #3e7c40; */ 
+    --primary-color: #28A745;  /* Change the primary color*/
     --secondary-color: #81C784;
     --background-color: #F4F4F4;
     --text-color: #333333;
