@@ -7,8 +7,45 @@
     <link rel="stylesheet" href="/Home/home.css">
     <title>Home</title>
     <link rel="stylesheet" href="/Home/home.css">
+    <link rel="stylesheet" href="/SplashScreen/SplashScreen.css">
 </head>
 <body>
+
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splashScreen">
+        <div>
+        <h1>Welcome to CareHive</h1>
+        <p>Our Mission</p>
+        <p>"To create a vibrant community platform that promotes physical, mental, and social well-being by connecting individuals with meaningful health initiatives and empowering them to lead healthier, happier lives."</p>
+        <ul>
+            <li>Group Members</li>
+            <li>Janidu Jayasundara</li>
+            <li>Nirmal Ranasinghe</li>
+            <li>Detuni Amaya</li>
+            <li>Himandi Sandanima</li>
+        </ul>
+        </div>
+        <div class="loader"></div>
+    </div>
+
+    <!-- Splash Screen JavaScript code -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const splashScreen = document.getElementById("splashScreen");
+          const mainContent = document.getElementById("mainContent");
+    
+          // Hide splash screen after 4 seconds
+          setTimeout(() => {
+            splashScreen.classList.add("fade-out");
+            setTimeout(() => {
+              splashScreen.style.display = "none";
+              mainContent.style.display = "block";
+            }, 1000);
+          }, 4000);
+        });
+      </script>
+
+
     <!-------nav bar------->
     <nav>
         <ul id="navbar">          
@@ -29,6 +66,12 @@
     <footer>
         <p>&copy; 2025 Good Health. All rights reserved.</p>
     </footer>
+
+
+
+
+
+
 </body>
 </html>
 
