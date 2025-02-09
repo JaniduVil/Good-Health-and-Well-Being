@@ -94,12 +94,35 @@
 
     .reviews h2 {
       margin-bottom: 1rem;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .overall-rating {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .overall-rating .rating {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #28A745;
+    }
+
+    .overall-rating .summary {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .review-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
     }
 
     .review-card {
       background: white;
       padding: 1rem;
-      margin-bottom: 1rem;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
@@ -107,6 +130,29 @@
     .review-card h3 {
       margin: 0 0 0.5rem;
       font-size: 1.1rem;
+      color: #007BFF;
+    }
+
+    .review-card p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .review-card a {
+      color: #007BFF;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .review-card a:hover {
+      text-decoration: underline;
+    }
+
+    .review-card .reviewer {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #777;
     }
 
     .feedback-form {
@@ -250,21 +296,37 @@
 
     </div>
 
-    <div class="reviews">
-      <h2>Recent Reviews</h2>
-      <div class="review-card">
-        <h3>10/10 Excellent!</h3>
-        <p>"Had an amazing experience volunteering!"</p>
-        <p>- Daniela G., Aug 12, 2019</p>
+    <div class="container">
+      <div class="reviews">
+        <h2>User Ratings and Reviews</h2>
+        <div class="overall-rating">
+          <div class="rating">9.4/10 Exceptional</div>
+          <div class="summary">Based on 109 reviews</div>
+        </div>
+  
+        <div class="review-list">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <h3>10/10 Excellent</h3>
+            <p>"Had an amazing experience volunteering! Highly recommend this program." <a href="#">See More</a></p>
+            <div class="reviewer">- Daniela G., Aug 12, 2019</div>
+          </div>
+  
+          <!-- Review 2 -->
+          <div class="review-card">
+            <h3>10/10 Excellent</h3>
+            <p>"The program was well-organized and impactful. The staff was supportive." <a href="#">See More</a></p>
+            <div class="reviewer">- Dr. Jean M., Aug 10, 2018</div>
+          </div>
+  
+          <!-- Review 3 -->
+          <div class="review-card">
+            <h3>9/10 Great</h3>
+            <p>"Enjoyed the experience overall. A few improvements could be made." <a href="#">See More</a></p>
+            <div class="reviewer">- Alex P., Jul 22, 2020</div>
+          </div>
+        </div>
       </div>
-
-      <div class="review-card">
-        <h3>10/10 Excellent!</h3>
-        <p>"The program was well-organized and impactful."</p>
-        <p>- Dr. Jean M., Aug 10, 2018</p>
-      </div>
-    </div>
-
     <div class="feedback-form">
       <h2>Send us your review</h2>
       <textarea placeholder="Got suggestions? We'd love to hear them!"></textarea>
