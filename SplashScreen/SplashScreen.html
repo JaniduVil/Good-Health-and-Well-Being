@@ -7,8 +7,9 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f3f4f6;
+      overflow: hidden;
     }
 
     /* Splash screen styling */
@@ -19,56 +20,136 @@
       width: 100%;
       height: 100%;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #4CAF50;
-      color: white;
-      font-size: 2rem;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      animation: gradientShift 6s infinite alternate;
       z-index: 10;
+      color: #e0e0e0;
+    }
+
+    .splash-container {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     }
 
     .splash-screen h1 {
-      margin-bottom: 1rem;
-      font-family: 'Times New Roman', Times, serif;
-      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin: 0;
+      animation: slideIn 1.5s ease-out;
     }
 
     .splash-screen p {
       font-size: 1.25rem;
+      color: #94a3b8;
+      margin: 1rem 20%;
       text-align: center;
-      margin: 0 20%;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .splash-screen ul {
+      display: inline-block;
+      text-align: left;
+      margin: 1rem 0 2rem;
       list-style: none;
       padding: 0;
-      margin-top: 1.5rem;
-      text-align: center;
     }
 
     .splash-screen ul li {
-      font-size: 1.2rem;
-      margin: 0.3rem 0;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 1rem;
+      color: #38bdf8;
+      margin: 0.5rem 0;
+      animation: fadeIn 2.5s ease-in-out;
     }
 
     /* Loader styling */
     .loader {
-      width: 50px;
-      height: 50px;
-      border: 5px solid white;
-      border-top: 5px solid transparent;
+      position: relative;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+      animation: spin 2s linear infinite;
+    }
+
+    .loader::before,
+    .loader::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      border: 5px solid transparent;
       border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-top: 2rem;
+      animation: rotateLoader 2s infinite linear;
+    }
+
+    .loader::before {
+      border-top: 5px solid #38bdf8;
+      border-bottom: 5px solid #64748b;
+    }
+
+    .loader::after {
+      border-left: 5px solid #38bdf8;
+      border-right: 5px solid #64748b;
+      animation-delay: -1s;
+    }
+
+    /* Animations */
+    @keyframes gradientShift {
+      0% {
+        background: linear-gradient(135deg, #1e293b, #0f172a);
+      }
+      100% {
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     @keyframes spin {
-      from {
+      0% {
         transform: rotate(0deg);
       }
-      to {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotateLoader {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
         transform: rotate(360deg);
       }
     }
@@ -99,19 +180,18 @@
 <body>
   <!-- Splash Screen -->
   <div class="splash-screen" id="splashScreen">
-    <div>
+    <div class="splash-container">
       <h1>Welcome to CareHive</h1>
       <p>Our Mission</p>
-      <p>"To create a vibrant community platform that promotes physical, mental, and social well-being by connecting individuals with meaningful health initiatives and empowering them to lead healthier, happier lives."</p>
+      <p>"To create a vibrant community platform that promotes physical, mental, and social well-being."</p>
       <ul>
-        <li>Group Members</li>
         <li>Janidu Jayasundara</li>
         <li>Nirmal Ranasinghe</li>
         <li>Detuni Amaya</li>
         <li>Himandi Sandanima</li>
       </ul>
+      <div class="loader"></div>
     </div>
-    <div class="loader"></div>
   </div>
 
   <!-- Main Content -->
