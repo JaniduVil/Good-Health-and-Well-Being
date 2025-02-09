@@ -89,7 +89,7 @@
     }
 
     .reviews {
-      margin-top: 2rem;
+      margin-top: 4rem;
     }
 
     .reviews h2 {
@@ -156,7 +156,7 @@
     }
 
     .feedback-form {
-      margin-top: 2rem;
+      margin-top: 5rem;
       background: white;
       padding: 1.5rem;
       border-radius: 8px;
@@ -172,14 +172,49 @@
       border-radius: 5px;
     }
 
-    .feedback-form button {
+    .feedback-form .emoji-container {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .feedback-form .emoji-container span {
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .feedback-form .emoji-container span:hover {
+      transform: scale(1.2);
+    }
+
+    .feedback-form .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .feedback-form .buttons button {
       padding: 0.7rem 1.5rem;
       border: none;
       border-radius: 5px;
-      background-color: #4CAF50;
-      color: white;
       font-size: 1rem;
       cursor: pointer;
+    }
+
+    .feedback-form .buttons .submit {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    .feedback-form .buttons .cancel {
+      background-color: #ccc;
+      color: black;
+    }
+
+    .feedback-form .buttons button:hover {
+      opacity: 0.9;
     }
     .program-table {
       margin-top: 1rem;
@@ -327,11 +362,21 @@
           </div>
         </div>
       </div>
-    <div class="feedback-form">
-      <h2>Send us your review</h2>
-      <textarea placeholder="Got suggestions? We'd love to hear them!"></textarea>
-      <button>Send Feedback</button>
-    </div>
+      <div class="feedback-form">
+        <h2>Send us your review</h2>
+        <textarea placeholder="Write your review here..."></textarea>
+        <div class="emoji-container">
+          <span>😞</span>
+          <span>😐</span>
+          <span>😊</span>
+          <span>😁</span>
+          <span>🌟</span>
+        </div>
+        <div class="buttons">
+          <button class="submit">Submit Feedback</button>
+          <button class="cancel">Cancel</button>
+        </div>
+      </div>
   </div>
 </body>
 </html>
