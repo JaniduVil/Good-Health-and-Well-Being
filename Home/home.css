@@ -1,21 +1,5 @@
-/* Reset default margin and padding */
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Ensure nav and footer span the full width */
-nav, footer {
-    width: 100%;
-    box-sizing: border-box; /* Include padding and border in the element's total width */
-}
-
-/* Rest of your CSS */
 :root {
-    /* --primary-color: #3e7c40; */ 
-    --primary-color: #28A745;  /* Change the primary color*/
+    --primary-color: #28A745;
     --secondary-color: #81C784;
     --background-color: #F4F4F4;
     --text-color: #333333;
@@ -26,20 +10,26 @@ nav, footer {
     --link-color: #1976D2;
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+/* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     font-family: Helvetica, sans-serif;
 }
 
-/*------nav bar-------*/
+/* Full-width Navbar */
 nav {
     display: flex;
-    align-items: center;
     justify-content: right;
-    flex-wrap: wrap;
     background-color: var(--primary-color);
     padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -47,13 +37,13 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    margin-right: 20px;
 }
 
 nav ul li {
     margin: 0 20px;
 }
 
-/* Style for links */
 nav ul li a {
     color: white;
     text-decoration: none;
@@ -62,7 +52,6 @@ nav ul li a {
     transition: color 0.1s ease-in-out;
 }
 
-/* Underline effect */
 nav ul li a::after {
     content: '';
     width: 0;
@@ -74,27 +63,73 @@ nav ul li a::after {
     transition: width 0.3s ease-in-out;
 }
 
-/* Expand underline on hover */
 nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Change text color on hover */
 nav ul li a:hover {
     color: var(--cta-color);
 }
 
-.icon{
+.icon {
     width: 25px;
 }
 
+/* Hero Section */
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/src/tim-foster-3wAPJB57w6s-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text {
+    font-size: 30px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Cards Section */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-color);
+}
 
 /* Footer */
 footer {
     background-color: var(--primary-color);
-    color: var(--text-color);
+    color: white;
     text-align: center;
+    padding: 10px 0;
+    width: 100%;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    left: 0;
 }
