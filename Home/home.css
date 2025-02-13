@@ -99,6 +99,7 @@ nav ul li a:hover {
 
 /* Cards Section */
 .cards-container {
+    background-color: black;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -106,7 +107,7 @@ nav ul li a:hover {
 }
 
 .card {
-    background: white;
+    background: var(--border-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -123,13 +124,51 @@ nav ul li a:hover {
 }
 
 /* Footer */
-footer {
+.footer {
+    display: flex;
+    justify-content: space-between;
     background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+    color: var(--text-color);
+    padding: 20px;
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column h3 {
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 5px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/*----Copiwrite------*/
+.copyright{
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    text-align: center;
+    padding: 1px 0;
+    background: var(--secondary-color);
+    font-weight: 300;
+    margin-top: 0px;
+}
+
+.copyright i{
+    color: #ffaa00;
 }
