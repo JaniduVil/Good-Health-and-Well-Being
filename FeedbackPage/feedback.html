@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+
+    <section class="feedback-container">
+        <h2>Feedback Form</h2>
+        <p>We value your feedback! Please fill out the form below.</p>
+
+        <form id="feedback-form">
+            
+            <!-- Personal Details -->
+            <fieldset>
+                <legend>Personal Details</legend>
+                
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required title="Please enter your full name">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required title="Please enter a valid email address">
+
+                <label for="phone">Telephone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter 10-digit number" title="Please enter a valid 10-digit phone number">
+                
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="3" required maxlength="100" title="Max 100 characters"></textarea>
+                <p id="address-counter">100 characters remaining</p>
+
+            </fieldset>
+
+            <!-- Feedback Details -->
+            <fieldset>
+                <legend>Feedback Details</legend>
+
+                <label for="message">Your Feedback</label>
+                <textarea id="message" name="message" rows="5" required maxlength="200" title="Max 200 characters"></textarea>
+                <p id="message-counter">200 characters remaining</p>
+
+                <!-- Dropdown (Popup List) -->
+                <label for="feedback-type">Feedback Type</label>
+                <select id="feedback-type" name="feedback-type" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="bug">Report a Bug</option>
+                    <option value="suggestion">Suggestion</option>
+                    <option value="general">General Feedback</option>
+                </select>
+
+                <!-- Scrolling List -->
+                <label for="categories">Select Relevant Topics</label>
+                <select id="categories" name="categories" multiple>
+                    <option value="ui">User Interface</option>
+                    <option value="ux">User Experience</option>
+                    <option value="performance">Performance</option>
+                    <option value="content">Content</option>
+                </select>
+
+                <!-- Datalist -->
+                <label for="search-topic">Search a Topic</label>
+                <input list="topics" id="search-topic" name="search-topic">
+                <datalist id="topics">
+                    <option value="Navigation"></option>
+                    <option value="Design"></option>
+                    <option value="Accessibility"></option>
+                </datalist>
+
+                <!-- Rating System -->
+                <label>Rate Your Experience</label>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">⭐</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">⭐</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">⭐</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">⭐</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">⭐</label>
+                </div>
+
+                <!-- Checkbox & Radio Button -->
+                <label>Preferred Contact Method</label>
+                <div>
+                    <input type="checkbox" id="contact-email" name="contact-method" value="email">
+                    <label for="contact-email">Email</label>
+
+                    <input type="checkbox" id="contact-phone" name="contact-method" value="phone">
+                    <label for="contact-phone">Phone</label>
+                </div>
+
+                <label>Are you satisfied with our service?</label>
+                <div>
+                    <input type="radio" id="satisfied-yes" name="satisfaction" value="yes">
+                    <label for="satisfied-yes">Yes</label>
+
+                    <input type="radio" id="satisfied-no" name="satisfaction" value="no">
+                    <label for="satisfied-no">No</label>
+                </div>
+
+                <!-- Date & Time -->
+                <label for="feedback-date">Date of Experience</label>
+                <input type="date" id="feedback-date" name="feedback-date">
+
+                <label for="feedback-datetime">Feedback Submission Time</label>
+                <input type="datetime-local" id="feedback-datetime" name="feedback-datetime">
+
+                <!-- File Upload -->
+                <label for="screenshot">Attach a Screenshot (Optional)</label>
+                <input type="file" id="screenshot" name="screenshot" accept="image/*">
+
+            </fieldset>
+
+            <!-- Submit -->
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+    </section>
+    <script src="script.js"></script>
+
+</body>
+</html>
