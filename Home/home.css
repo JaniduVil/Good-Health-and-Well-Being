@@ -22,9 +22,10 @@ html, body {
 /* Full-width Navbar */
 nav {
     display: flex;
-    justify-content: right;
-    background-color: var(--primary-color);
-    padding: 10px 0;
+    align-items: center; /* Aligns items (logo and links) vertically */
+    justify-content: space-between; /* Ensures space between logo and links */
+    background-color: transparent;
+    padding: 1px 2px; /* Adjusted padding */
     width: 100%;
     position: fixed;
     top: 0;
@@ -32,16 +33,23 @@ nav {
     z-index: 1000;
 }
 
+#logo {
+    height: 70px; /* Adjust the height if needed */
+    width: auto;
+    margin-left: 20px; /* Adjust spacing from the left */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: center; /* Ensures text is vertically centered */
     margin-right: 20px;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 15px; /* Reduce spacing if necessary */
 }
 
 nav ul li a {
@@ -50,30 +58,37 @@ nav ul li a {
     font-size: 18px;
     position: relative;
     transition: color 0.1s ease-in-out;
+    display: flex;
+    align-items: center; /* Ensures text is centered */
 }
 
-nav ul li a::after {
+/* nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: var(--cta-color);
+    background: var(--primary-color);
     position: absolute;
     left: 0;
     bottom: -6px;
     transition: width 0.3s ease-in-out;
-}
+} */
 
 nav ul li a:hover::after {
     width: 100%;
 }
 
 nav ul li a:hover {
-    color: var(--cta-color);
+    color: var(--primary-color);
+}
+
+#nav-icon{
+    margin-right: 30px;
 }
 
 .icon {
-    width: 25px;
+    width: 33px;
 }
+
 
 /* Hero Section */
 #hero {
