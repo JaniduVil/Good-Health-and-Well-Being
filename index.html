@@ -1,21 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/Home/home.css">
-    <title>Home</title>
-    <link rel="stylesheet" href="/Home/home.css">
-    <link rel="stylesheet" href="/SplashScreen/SplashScreen.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareHive - Welcome</title>
+  <style>
+    /* Full-page background */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: url("/src/splashScreenImage.webp") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Splash screen container */
+    .splash-screen {
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      opacity: 1;
+      transition: opacity 1s ease-in-out; /* Smooth fade-out transition */
+    }
+
+    /* Title */
+    .splash-screen h1 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* Mission statement */
+    .splash-screen p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Group members list */
+    .splash-screen ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .splash-screen ul li {
+      font-size: 1rem;
+      margin: 5px 0;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    /* Custom animated loader */
+    .loader {
+      margin: 20px auto;
+      width: 50px;
+      height: 50px;
+      border: 5px solid transparent;
+      border-radius: 50%;
+      border-top: 5px solid #38bdf8;
+      border-right: 5px solid #94a3b8;
+      animation: spin 1s linear infinite;
+    }
+
+    /* Keyframe animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Fade out effect */
+    .fade-out {
+      opacity: 0 !important;
+    }
+  </style>
 </head>
 <body>
+  <!-- Splash Screen Content -->
+  <div class="splash-screen" id="splashScreen">
+    <h1>Welcome to CareHive</h1>
+    <p>"Our mission is to foster well-being through community engagement and support."</p>
+    <h3>Team Members:</h3>
+    <ul>
+      <li>Janidu Jayasundara</li>
+      <li>Nirmal Ranasinghe</li>
+      <li>Detuni Amaya</li>
+      <li>Himandi Sandanima</li>
+    </ul>
+    <div class="loader"></div> <!-- Animated Loader -->
+    <p>Loading Home Page...</p>
+  </div>
 
-    <!-- Splash Screen -->
-
-
-    <!-- Splash Screen JavaScript code -->
-
-  </body>
+  <script>
+    setTimeout(() => {
+      document.getElementById('splashScreen').classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = "/home/home.html"; // Redirect after fade-out
+      },400); // Wait for fade-out transition
+    }, 4000); // Display splash screen for 3 seconds before fading
+  </script>
+</body>
 </html>
-
