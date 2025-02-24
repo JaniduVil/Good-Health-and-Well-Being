@@ -10,7 +10,6 @@
     --link-color: #1976D2;
 }
 
-/* Reset default margin and padding */
 html, body {
     margin: 0;
     padding: 0;
@@ -23,10 +22,10 @@ html, body {
 /* Full-width Navbar */
 nav {
     display: flex;
-    align-items: center; /* Aligns items (logo and links) vertically */
-    justify-content: space-between; /* Ensures space between logo and links */
+    align-items: center;
+    justify-content: space-between;
     background-color: transparent;
-    padding: 1px 2px; /* Adjusted padding */
+    padding: 1px 2px;
     width: 100%;
     position: relative;
     top: 0;
@@ -35,9 +34,9 @@ nav {
 }
 
 #logo {
-    height: 70px; /* Adjust the height if needed */
+    height: 70px;
     width: auto;
-    margin-left: 20px; /* Adjust spacing from the left */
+    margin-left: 20px;
 }
 
 nav ul {
@@ -45,12 +44,12 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center; /* Ensures text is vertically centered */
+    align-items: center;
     margin-right: 20px;
 }
 
 nav ul li {
-    margin: 0 15px; /* Reduce spacing if necessary */
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -60,7 +59,7 @@ nav ul li a {
     position: relative;
     transition: color 0.1s ease-in-out;
     display: flex;
-    align-items: center; /* Ensures text is centered */
+    align-items: center;
 }
 
 nav ul li a::after {

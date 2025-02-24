@@ -29,43 +29,18 @@
 
     <!-- Splash Screen JavaScript code -->
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("DOMContentLoaded", () => {
           const splashScreen = document.getElementById("splashScreen");
-          const mainContent = document.getElementById("mainContent");
-    
-          // Hide splash screen after 4 seconds
+  
+          // Hide splash screen after 4 seconds and redirect
           setTimeout(() => {
-            splashScreen.classList.add("fade-out");
-            setTimeout(() => {
-              splashScreen.style.display = "none";
-              mainContent.style.display = "block";
-            }, 1000);
+              splashScreen.classList.add("fade-out");
+              setTimeout(() => {
+                  window.location.href = "/Home/home.html";
+              },);
           }, 4000);
-        });
-      </script>
-
-
-    <!-------nav bar------->
-    <nav>
-        <ul id="navbar">          
-            <li><a href="/Home/home.html">Home</a></li>
-            <li><a href="/Volunteer/VolunteerPage.html">Volunteer</a></li>
-            <li><a href="#">Table</a></li>
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="#">Feedback</a></li>
-            <li><a href="/TeamPage/team.html">Team</a></li>
-            <li><a href="/EditorsPage/editorsPage.html">Editors</a></li>
-            <li><a href="#"><img src="./src/icons8-male-user-48.png" class="icon" alt=""></a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, repellendus! Dolorem, eaque error a labore distinctio similique sed molestiae voluptatem itaque. Velit perferendis harum amet enim nam at molestiae modi!</p>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Good Health. All rights reserved.</p>
-    </footer>
+      });
+  </script>
   </body>
 </html>
 
