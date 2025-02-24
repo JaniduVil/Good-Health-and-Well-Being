@@ -3,6 +3,8 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #f3f4f6;
   overflow: hidden;
+  background-image: url("/src/_Pngtree_medical_health_logo_4134836-removebg-preview.png");
+
 }
 
 /* Splash screen styling */
@@ -19,7 +21,7 @@ body {
   animation: gradientShift 6s infinite alternate;
   z-index: 10;
   color: #e0e0e0;
-  /* background-image: url("/src/fitness-trends.webp"); */
+  background-image: url("/src/_Pngtree_medical_health_logo_4134836-removebg-preview.png");
 }
 
 .splash-container {
@@ -29,6 +31,7 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
 }
 
 .splash-screen h1 {
@@ -59,12 +62,11 @@ body {
 
 .splash-screen ul li {
   font-size: 1rem;
-  color: #28A745; /* Updated to your theme color */
+  color: #28A745; 
   margin: 0.5rem 0;
   animation: fadeIn 2.5s ease-in-out;
 }
 
-/* Loader styling */
 .loader {
   position: relative;
   width: 80px;
@@ -90,12 +92,12 @@ body {
 }
 
 .loader::before {
-  border-top: 5px solid #28A745; /* Updated to your theme color */
+  border-top: 5px solid #28A745; 
   border-bottom: 5px solid #64748b;
 }
 
 .loader::after {
-  border-left: 5px solid #28A745; /* Updated to your theme color */
+  border-left: 5px solid #28A745; 
   border-right: 5px solid #64748b;
   animation-delay: -1s;
 }
