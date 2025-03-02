@@ -1,8 +1,8 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
 }
 
 .container {
@@ -17,16 +17,18 @@ main {
 }
 aside {
     flex: 1;
-    background-color: #f4f4f4;
-    padding: 15px;
-    border: 1px solid #ddd;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-right: 20px;
 }
 section {
     margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    background-color: #fafafa;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
