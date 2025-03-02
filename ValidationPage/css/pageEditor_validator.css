@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
 }
 
 .container {
@@ -17,23 +18,20 @@ main {
 }
 aside {
     flex: 1;
-    background-color: #f4f4f4;
-    padding: 15px;
-    border: 1px solid #ddd;
+    background: rgb(248, 255, 250);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-right: 20px;
 }
 section {
     margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    background-color: #fafafa;
+    background: rgb(248, 255, 250);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-header, footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
+
 
 .ref li{
     list-style: none;
@@ -51,9 +49,12 @@ aside li{
 .stud {
     text-align: center;
     line-height: 0;
-    background-color: #cbccc2ef;
+    background-color: #28A745;
     color: white;
     margin-top: 8px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .top {
