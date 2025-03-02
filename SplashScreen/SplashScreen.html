@@ -10,7 +10,7 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: url("/src/splashScreenImage.webp") no-repeat center center fixed;
+      background: url("/src/a1.png") no-repeat center center fixed;
       background-size: cover;
       display: flex;
       align-items: center;
@@ -28,6 +28,8 @@
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(8px);
+      opacity: 1;
+      transition: opacity 1s ease-in-out; /* Smooth fade-out transition */
     }
 
     /* Title */
@@ -57,7 +59,7 @@
       font-size: 1rem;
       margin: 5px 0;
       font-weight: bold;
-      color: #38bdf8;
+      color: #38f88b;
     }
 
     /* Custom animated loader */
@@ -67,7 +69,7 @@
       height: 50px;
       border: 5px solid transparent;
       border-radius: 50%;
-      border-top: 5px solid #38bdf8;
+      border-top: 5px solid #38f87b;
       border-right: 5px solid #94a3b8;
       animation: spin 1s linear infinite;
     }
@@ -82,11 +84,16 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
+    /* Fade out effect */
+    .fade-out {
+      opacity: 0 !important;
+    }
   </style>
 </head>
 <body>
   <!-- Splash Screen Content -->
-  <div class="splash-screen">
+  <div class="splash-screen" id="splashScreen">
     <h1>Welcome to CareHive</h1>
     <p>"Our mission is to foster well-being through community engagement and support."</p>
     <h3>Team Members:</h3>
@@ -96,8 +103,17 @@
       <li>Detuni Amaya</li>
       <li>Himandi Sandanima</li>
     </ul>
-    <div class="loader"></div> <!-- Animated Loader -->
+    <div class="loader"></div> 
     <p>Loading Home Page...</p>
   </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('splashScreen').classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = "/home/home.html"; 
+      },300); 
+    }, 4000); 
+  </script>
 </body>
 </html>
