@@ -1,0 +1,257 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #81C784;
+    --background-color: #f2fff8;
+    --text-color: #333333;
+    --border-color: #D9D9D9;
+    --cta-color: #FFC107;
+    --error-color: #E57373;
+    --success-color: #66BB6A;
+    --link-color: #1976D2;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 1px 2px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#logo {
+    height: 70px;
+    width: auto;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #064021;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+#nav-icon{
+    margin-right: 30px;
+}
+
+.icon {
+    width: 33px;
+}
+
+.profile-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    object-fit: cover;
+}
+
+.user-info h2 {
+    color: var(--primary-color);
+}
+
+.section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.02);
+}
+
+.skill-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    width: 60%;
+    height: 8px;
+    background: var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fill {
+    display: block;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.volunteering-list, .interest-list {
+    list-style: none;
+    padding: 0;
+}
+
+.volunteering-list li, .interest-list li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
+}
+
+.schedule-table th {
+    background: var(--primary-color);
+    color: white;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 97.5%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: var(--cta-color);
+    color: black;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: darkorange;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #D6FFE9;
+    color: var(--text-color);
+    padding: 20px;
+    line-height: 1; 
+}
+
+.footer-column {
+    width: 30%;
+    line-height: 1; 
+}
+
+.footer-column h3 {
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 5px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo{
+    height:100px ;
+    position: relative;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 1px 0;
+    background: #064021;
+    font-weight: 300;
+    margin-top: 0px;
+}
+
+.copyright p{
+    color: #D6FFE9;
+}
