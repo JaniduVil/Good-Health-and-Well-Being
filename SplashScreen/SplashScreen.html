@@ -4,89 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CareHive - Welcome</title>
-  <meta http-equiv="refresh" content="4;url=/home/home.html"> <!-- Auto-redirect to home.html after 4s -->
-  <style>
-    /* Full-page background */
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: url("/src/splashScreenImage.webp") no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    /* Splash screen container */
-    .splash-screen {
-      text-align: center;
-      color: white;
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(8px);
-    }
-
-    /* Title */
-    .splash-screen h1 {
-      font-size: 2.5rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    /* Mission statement */
-    .splash-screen p {
-      font-size: 1.2rem;
-      margin: 10px 0;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    /* Group members list */
-    .splash-screen ul {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0;
-      animation: fadeIn 2.5s ease-in-out;
-    }
-
-    .splash-screen ul li {
-      font-size: 1rem;
-      margin: 5px 0;
-      font-weight: bold;
-      color: #38bdf8;
-    }
-
-    /* Custom animated loader */
-    .loader {
-      margin: 20px auto;
-      width: 50px;
-      height: 50px;
-      border: 5px solid transparent;
-      border-radius: 50%;
-      border-top: 5px solid #38bdf8;
-      border-right: 5px solid #94a3b8;
-      animation: spin 1s linear infinite;
-    }
-
-    /* Keyframe animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
+  <meta http-equiv="refresh" content="4; url=/home/home.html"> <!-- Auto-redirect to home.html after 4s -->
+  <link rel="stylesheet" href="SplashScreen.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon-32x32.png">
 </head>
 <body>
   <!-- Splash Screen Content -->
-  <div class="splash-screen">
+  <div class="splash-screen" id="splashScreen">
     <h1>Welcome to CareHive</h1>
     <p>"Our mission is to foster well-being through community engagement and support."</p>
     <h3>Team Members:</h3>
@@ -96,8 +20,17 @@
       <li>Detuni Amaya</li>
       <li>Himandi Sandanima</li>
     </ul>
-    <div class="loader"></div> <!-- Animated Loader -->
+    <div class="loader"></div> 
     <p>Loading Home Page...</p>
   </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('splashScreen').classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = "/home/home.html"; 
+      },300); 
+    }, 4000); 
+  </script>
 </body>
 </html>
