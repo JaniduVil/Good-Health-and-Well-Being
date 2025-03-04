@@ -4,7 +4,8 @@
     --background-color: #F4F4F4;
     --text-color: #333333;
     --border-color: #D9D9D9;
-    --cta-color: #FFC107;
+    /* --cta-color: #FFC107; */
+    --cta-color: #007BFF;
     --error-color: #E57373;
     --success-color: #66BB6A;
     --link-color: #1976D2;
@@ -28,12 +29,23 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.feedback-container p {
+    text-align: center;
+    font-size: 14px; /* Larger font size */
+    color: var(--text-color); /* Use the primary color to make it stand out */
+    font-weight: bold; /* Make the text bold */
+    margin-top: 10px; /* Add some space above */
+    margin-bottom: 20px; /* Add some space below */
+    line-height: 1.5; /* Improve line height for readability */
+}
+
+
 h2 {
     text-align: center;
     color: var(--primary-color);
 }
 
-/* Form styling */
+/* Form Styling */
 form {
     display: flex;
     flex-direction: column;
@@ -45,6 +57,20 @@ fieldset {
     border-radius: 8px;
     padding: 20px;
 }
+
+/* Style the checkbox section */
+fieldset .checkbox-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow checkboxes to wrap if there is not enough space */
+    gap: 15px; /* Adjust the gap between checkboxes */
+}
+
+/* Adjust checkbox label alignment */
+.checkbox-section label {
+    margin: 5px 0; /* Add margin for top and bottom of each label */
+}
+
+
 
 legend {
     font-weight: bold;
@@ -58,6 +84,7 @@ label {
     margin-top: 10px;
 }
 
+/* Input Fields */
 input, textarea, select {
     width: 100%;
     padding: 10px;
@@ -65,16 +92,28 @@ input, textarea, select {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
 }
 
 textarea {
     resize: vertical;
 }
 
+/* Change border on focus */
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color);
+}
+
+/* Show error only after user interaction */
+input.user-interacted:invalid, textarea.user-interacted:invalid {
+    border: 2px solid var(--error-color);
+}
+
 /* Buttons */
 button {
     background-color: var(--cta-color);
-    color: black;
+    color: whitesmoke;
     padding: 12px;
     border: none;
     width: 100%;
@@ -85,15 +124,12 @@ button {
 }
 
 button:hover {
-    background-color: var(--success-color);
+    /* background-color: var(--success-color); */
+    opacity: 0.8;
 }
 
-/* Error styling */
-input:invalid, textarea:invalid {
-    border: 2px solid var(--error-color);
-}
 
-/* Character counter */
+/* Character Counter */
 p {
     font-size: 14px;
     text-align: right;
@@ -129,7 +165,7 @@ select[multiple] {
 }
 
 /* Checkbox & Radio Alignment */
-div {
+.checkbox-group, .radio-group {
     display: flex;
     align-items: center;
     gap: 10px;

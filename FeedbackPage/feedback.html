@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
-    <link rel="stylesheet" href="/Home/home.css"">
+    <link rel="stylesheet" href="/Home/home.css">
     <link rel="stylesheet" href="feedback.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon-32x32.png">
 </head>
@@ -46,6 +46,18 @@
                 <label for="phone">Telephone Number</label>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter 10-digit number" title="Please enter a valid 10-digit phone number">
                 
+                <label>Preferred Contact Method:</label>
+                <div class="checkbox-section">
+                    <input type="checkbox" id="contact-email" name="contact-method" value="email">
+                    <label for="contact-email">Email</label>
+            
+                    <input type="checkbox" id="contact-phone" name="contact-method" value="phone">
+                    <label for="contact-phone">Phone</label>
+            
+                    <input type="checkbox" id="contact-whatsapp" name="contact-method" value="whatsapp">
+                    <label for="contact-whatsapp">WhatsApp</label>
+                </div>
+
                 <label for="address">Address</label>
                 <textarea id="address" name="address" rows="3" required maxlength="100" title="Max 100 characters"></textarea>
                 <p id="address-counter">100 characters remaining</p>
@@ -142,11 +154,11 @@
         <div class="footer-column">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Home/home.html">Home</a></li>
                 <li><a href="/Volunteer/VolunteerPage.html">Volunteer</a></li>
                 <li><a href="/Data/Data.html">Data</a></li>
                 <li><a href="#">Sitemap</a></li>
-                <li><a href="#">Feedback</a></li>
+                <li><a href="/FeedbackPage/feedback.html">Feedback</a></li>
                 <li><a href="/TeamPage/team.html">Team</a></li>
                 <li><a href="/EditorsPage/editorsPage.html">Editors</a></li>
             </ul>
@@ -154,11 +166,10 @@
         <div class="footer-column">
             <h3>Our Editors</h3>
             <ul>
-                <li><a href="/EditorsPage/editorsPage.html"">Editor 1</a></li>
-                <li><a href="#">Editor 2</a></li>
-                <li><a href="#">Editor 3</a></li>
-                <li><a href="#">Editor 4</a></li>
-                <li><a href="#">Editor 5</a></li>
+                <li><a href="/EditorsPage/editorsPage.html">Janidu Jayasundara</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST02.html">Nirmal Ranasinghe</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST03.html">Detuni Amaya</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST04.html">Sandanima Wahalathanthri</a></li>
             </ul>
         </div>
         
