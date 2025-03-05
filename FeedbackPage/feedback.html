@@ -60,7 +60,36 @@
 
                 <label for="address">Address</label>
                 <textarea id="address" name="address" rows="3" required maxlength="100" title="Max 100 characters"></textarea>
-                <p id="address-counter">100 characters remaining</p>
+                <!-- <p id="address-counter">100 characters remaining</p> -->
+
+                <label for="city">Your City:</label>
+                <input list="cities" id="city" name="city">
+                <datalist id="cities">
+                    <option value="Colombo"></option>
+                    <option value="Mount Lavinia"></option>
+                    <option value="Kesbewa"></option>
+                    <option value="Maharagama"></option>
+                    <option value="Moratuwa"></option>
+                    <option value="Ratnapura"></option>
+                    <option value="Negombo"></option>
+                    <option value="Kandy"></option>
+                    <option value="Sri Jayewardenepura Kotte"></option>
+                    <option value="Kalmunai"></option>
+                    <option value="Trincomalee"></option>
+                    <option value="Galle"></option>
+                    <option value="Jaffna"></option>
+                    <option value="Athurugiriya"></option>
+                    <option value="Weligama"></option>
+                    <option value="Matara"></option>
+                    <option value="Kolonnawa"></option>
+                    <option value="Gampaha"></option>
+                    <option value="Puttalam"></option>
+                    <option value="Badulla"></option>
+                    <option value="Kalutara"></option>
+                    <option value="Bentota"></option>
+                    <option value="Mannar"></option>
+                    <option value="Kurunegala"></option>
+                </datalist>
 
             </fieldset>
 
@@ -100,33 +129,40 @@
                 </datalist>
 
                 <!-- Rating System -->
-                <label>Rate Your Experience</label>
+                <!-- <label>Rate Your Experience</label>
                 <div class="rating">
                     <input type="radio" id="star5" name="rating" value="5"><label for="star5">⭐</label>
                     <input type="radio" id="star4" name="rating" value="4"><label for="star4">⭐</label>
                     <input type="radio" id="star3" name="rating" value="3"><label for="star3">⭐</label>
                     <input type="radio" id="star2" name="rating" value="2"><label for="star2">⭐</label>
                     <input type="radio" id="star1" name="rating" value="1"><label for="star1">⭐</label>
-                </div>
+                </div> -->
 
-                <!-- Checkbox & Radio Button -->
-                <label>Preferred Contact Method</label>
-                <div>
-                    <input type="checkbox" id="contact-email" name="contact-method" value="email">
-                    <label for="contact-email">Email</label>
-
-                    <input type="checkbox" id="contact-phone" name="contact-method" value="phone">
-                    <label for="contact-phone">Phone</label>
+                <label for="rating">Rate Us:</label>
+                <div class="rating">
+                    <span>😡</span>
+                    <span>☹️</span>
+                    <span>😐</span>
+                    <span>😊</span>
+                    <span>😍</span>
                 </div>
 
                 <label>Are you satisfied with our service?</label>
                 <div>
-                    <input type="radio" id="satisfied-yes" name="satisfaction" value="yes">
-                    <label for="satisfied-yes">Yes</label>
+                <label>
+                    <input type="radio" name="satisfaction" value="yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="satisfaction" value="no"> No
+                </label>
+                <label>
+                    <input type="radio" name="satisfaction" value="neutral"> Neutral
+                </label>
+            </div>
 
-                    <input type="radio" id="satisfied-no" name="satisfaction" value="no">
-                    <label for="satisfied-no">No</label>
-                </div>
+                    <!-- Date and Time Selection -->
+    <label for="feedback-datetime">Schedule Feedback Submission:</label>
+    <input type="datetime-local" id="feedback-datetime" name="feedback-datetime" required>
 
                 <!-- Date & Time -->
                 <label for="feedback-date">Date of Experience</label>

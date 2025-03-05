@@ -137,7 +137,7 @@ p {
 }
 
 /* Rating Section */
-.rating {
+/* .rating {
     display: flex;
     justify-content: center;
     gap: 12px;
@@ -152,7 +152,28 @@ p {
 
 .rating label:hover {
     transform: scale(1.2);
+} */
+
+/* Rating Container */
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 2rem;
+    cursor: pointer;
 }
+
+/* Default Style */
+.rating span {
+    transition: transform 0.2s, color 0.2s;
+}
+
+/* Hover Effect - Only the hovered emoji enlarges */
+.rating span:hover {
+    transform: scale(1.2);
+    color: gold;
+}
+
 
 /* Hide radio buttons for rating */
 .rating input[type="radio"] {
