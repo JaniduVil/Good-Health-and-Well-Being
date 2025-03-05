@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Editor Student - Detuni</title>
+    <title>Page Editor Student - Detuni Amaya</title>
     <link rel="stylesheet" href="/ValidationPage/pageEditor_validator.css">
     <link rel="stylesheet" href="/Home/home.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
+    <link rel="stylesheet" href="/home/home.css"> <!-- External CSS link -->
 </head>
 <body>
    <!------- Full-width Navigation Bar ------->
@@ -18,15 +20,15 @@
             <li><a href="/Data/Data.html">Data</a></li>
             <li><a href="#">Sitemap</a></li>
             <li><a href="/TeamPage/team.html">Team</a></li>
-            <li><a href="/FeedbackPage/feedback.html"">Feedback</a></li>
+            <li><a href="/FeedbackPage/feedback.html">Feedback</a></li>
         </ul>
         <div id="nav-icon">
-            <a href="#"><img src="/src/profile-user (1).png" class="icon" alt=""></a>
+            <a href="/ProfilePage/profilepage.html"><img src="/src/profile-user(1).png" class="icon" alt=""></a>
         </div>     
     </nav>
 
     <section class="stud">
-        <h2>Detuni, Student - 03</h2>
+        <h2>Detuni Amaya (Student - 03)</h2>
     </section>
 
     <div class="container">
@@ -36,34 +38,80 @@
             <!-- Update those first three sections for the pages you were responsible to implement -->
 
             <section>
-                <h2 id="splash">Splash Page</h2>
+                <h2 id="feedback">Feedback Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
-                    
+                    <p>
+                        The Feedback Page is designed using HTML, CSS, and JavaScript to create an interactive and accessible form for users to submit feedback. The HTML structure includes various form elements such as text inputs, email fields, dropdowns, radio buttons, checkboxes, and a rating system to ensure comprehensive feedback collection.
+                    </p>
+                    <p>
+                        The CSS styling enhances usability by implementing a structured layout, consistent spacing, and responsive design to accommodate different screen sizes. Error handling and input validation are integrated using JavaScript to provide instant feedback to users, ensuring a smooth and user-friendly experience. The submit button triggers form validation, preventing incomplete or incorrect submissions.
+                    </p>
+                    <p>
+                        Additionally, a dynamic success message appears upon successful form submission, enhancing user engagement. The page also includes smooth transition effects for a polished, modern user interface.
+                    </p>
+
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
-                    
+                    <p>
+                        The Feedback Page follows accessibility best practices to ensure inclusivity for all users, including those with disabilities. The HTML structure incorporates semantic elements such as <code>&lt;label&gt;</code> tags associated with input fields, aiding screen readers in conveying information effectively.
+                    </p>
+                    <ul>
+                        <li><strong>Color Contrast:</strong> High contrast between text and background improves readability.</li>
+                        <li><strong>Keyboard Navigation:</strong> Users can navigate through the form using the keyboard, enhancing accessibility for those with motor impairments.</li>
+                        <li><strong>ARIA Attributes:</strong> Implemented where necessary to improve screen reader interpretation.</li>
+                        <li><strong>Validation Messages:</strong> Clear, descriptive error messages assist users in correcting input errors.</li>
+                    </ul>
+                    <p>
+                        These accessibility-focused considerations ensure that the Feedback Page is inclusive and provides a seamless user experience for diverse audiences.
+                    </p>
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
                         <p><a href="validation_ST0.html#splashVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                     <h3>Link to the page</h3>
-                        <p><a href="splash.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="/FeedbackPage/feedback.html">Include a link to the actual page you describe.</a></p>
             </section>
 
             <section>
-                <h2 id="volunteer">Volunteer Page</h2>
+                <h2 id="team">Team Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                    <p>
+                        The Team Page is developed using HTML and CSS to provide an interactive and accessible display of team members' profiles. The page structure follows a responsive layout, ensuring a seamless experience across various screen sizes.
+                    </p>
+                    <p>
+                        Key HTML elements include:
+                        <ul>
+                            <li><strong>&lt;section&gt;</strong> and <strong>&lt;article&gt;</strong> tags to structure content semantically.</li>
+                            <li><strong>&lt;div&gt;</strong> containers for individual team members, allowing flexibility in styling.</li>
+                            <li><strong>&lt;img&gt;</strong> tags for profile pictures with appropriate <code>alt</code> attributes for accessibility.</li>
+                            <li><strong>&lt;h3&gt;</strong> and <strong>&lt;p&gt;</strong> tags to present names, roles, and descriptions.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        CSS techniques used:
+                        <ul>
+                            <li><strong>Flexbox/Grid:</strong> Ensures a responsive and well-aligned team member section.</li>
+                            <li><strong>Hover Effects:</strong> Provides smooth transitions when interacting with profile thumbnails.</li>
+                            <li><strong>Animations:</strong> Fade-in and scaling effects enhance user engagement.</li>
+                            <li><strong>Media Queries:</strong> Adjust layout for mobile, tablet, and desktop views.</li>
+                        </ul>
+                    </p>
 
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
-
+                    <p>
+                        The Team Page follows accessibility best practices, ensuring an inclusive experience for all users. Key enhancements include:
+                        <ul>
+                            <li><strong>Keyboard Navigation:</strong> All interactive elements are accessible using the keyboard.</li>
+                            <li><strong>ARIA Roles & Labels:</strong> Applied where necessary to improve screen reader support.</li>
+                            <li><strong>Color Contrast:</strong> Ensures text readability for users with visual impairments.</li>
+                            <li><strong>Alternative Text:</strong> All images have descriptive <code>alt</code> attributes.</li>
+                            <li><strong>Focusable Elements:</strong> Maintains logical tab order for improved usability.</li>
+                        </ul>
+                    </p>
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
                         <p><a href="validation_ST0.html#volunteerVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                         
                     <h3>Link to the page</h3>
-                        <p><a href="volunteer.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="/TeamPage/team.html">Include a link to the actual page you describe.</a></p>
             </section>
 
             <section>
@@ -113,29 +161,11 @@
         <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
             <ul class="top-level-ul">
                 <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
-                <li>Student 1</li>
-                    <ul> 
-                        <li><a href="#splash">Splash page</a></li>
-                        <li><a href="#volunteer">Volunteer page</a></li>
-                        <li><a href="#content">Content page</a></li>
-                    </ul>
-                <li>Student 2</li>
-                    <ul>
-                        <li><a href="#">Home page </a></li>
-                        <li><a href="#">Table page</a></li>
-                        <li><a href="#">Content page</a></li>
-                    </ul>
                 <li>Student 3</li>
                     <ul>
-                        <li><a href="#">Feedback page</a> </li>
-                        <li><a href="#">Team page</a></li>
-                        <li><a href="#">Content page</a></li>
-                    </ul>
-                <li>Student 4</li>
-                    <ul>
-                        <li><a href="#">Profile page </a></li>
-                        <li><a href="#">Sitemap page</a></li>
-                        <li><a href="#">Content page</a></li>
+                        <li><a href="#feedback">Feedback page</a> </li>
+                        <li><a href="#team">Team page</a></li>
+                        <li><a href="#content">Content page</a></li>
                     </ul>
                 <li><a href="#challenge">Challenges and Lessons Learned</a></li>
                 <li><a href="#compliance">Compliance</a></li>
@@ -163,11 +193,10 @@
         <div class="footer-column">
             <h3>Our Editors</h3>
             <ul>
-                <li><a href="/EditorsPage/editorsPage.html"">Editor 1</a></li>
-                <li><a href="#">Editor 2</a></li>
-                <li><a href="#">Editor 3</a></li>
-                <li><a href="#">Editor 4</a></li>
-                <li><a href="#">Editor 5</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST01.html">Janidu Jayasundara</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST02.html">Nirmal Ranasinghe</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST03.html">Detuni Amaya</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST04.html">Sandanima Wahalathanthri</a></li>
             </ul>
         </div>
         
