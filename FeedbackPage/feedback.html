@@ -20,7 +20,7 @@
             <li><a href="#">Sitemap</a></li>
             <li><a href="/TeamPage/team.html">Team</a></li>
             <li><a href="/EditorsPage/editorsPage.html">Editors</a></li>
-            <li><a href="/Good-Health-and-Well-Being/FeedbackPage/feedback.html"">Feedback</a></li>
+            <li><a href="/Good-Health-and-Well-Being/FeedbackPage/feedback.html">Feedback</a></li>
         </ul>
         <div id="nav-icon">
             <a href="/ProfilePage/profilepage.html"><img src="/src/profile-user(1).png" class="icon" alt=""></a>
@@ -97,10 +97,6 @@
             <fieldset>
                 <legend>Feedback Details</legend>
 
-                <label for="message">Your Feedback</label>
-                <textarea id="message" name="message" rows="5" required maxlength="200" title="Max 200 characters"></textarea>
-                <p id="message-counter">200 characters remaining</p>
-
                 <!-- Dropdown (Popup List) -->
                 <label for="feedback-type">Feedback Type</label>
                 <select id="feedback-type" name="feedback-type" required>
@@ -110,33 +106,10 @@
                     <option value="general">General Feedback</option>
                 </select>
 
-                <!-- Scrolling List -->
-                <label for="categories">Select Relevant Topics</label>
-                <select id="categories" name="categories" multiple>
-                    <option value="ui">User Interface</option>
-                    <option value="ux">User Experience</option>
-                    <option value="performance">Performance</option>
-                    <option value="content">Content</option>
-                </select>
+                <label for="message">Your Feedback</label>
+                <textarea id="message" name="message" rows="5" required maxlength="200" title="Max 200 characters"></textarea>
+                <p id="message-counter">200 characters remaining</p>
 
-                <!-- Datalist -->
-                <label for="search-topic">Search a Topic</label>
-                <input list="topics" id="search-topic" name="search-topic">
-                <datalist id="topics">
-                    <option value="Navigation"></option>
-                    <option value="Design"></option>
-                    <option value="Accessibility"></option>
-                </datalist>
-
-                <!-- Rating System -->
-                <!-- <label>Rate Your Experience</label>
-                <div class="rating">
-                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">⭐</label>
-                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">⭐</label>
-                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">⭐</label>
-                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">⭐</label>
-                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">⭐</label>
-                </div> -->
 
                 <label for="rating">Rate Us:</label>
                 <div class="rating">
@@ -148,28 +121,22 @@
                 </div>
 
                 <label>Are you satisfied with our service?</label>
-                <div>
-                <label>
-                    <input type="radio" name="satisfaction" value="yes"> Yes
-                </label>
-                <label>
-                    <input type="radio" name="satisfaction" value="no"> No
-                </label>
-                <label>
-                    <input type="radio" name="satisfaction" value="neutral"> Neutral
-                </label>
-            </div>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="satisfaction" value="yes" required> Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="satisfaction" value="no"> No
+                    </label>
+                    <label>
+                        <input type="radio" name="satisfaction" value="neutral"> Neutral
+                    </label>
+                </div>
+                
 
-                    <!-- Date and Time Selection -->
-    <label for="feedback-datetime">Schedule Feedback Submission:</label>
-    <input type="datetime-local" id="feedback-datetime" name="feedback-datetime" required>
-
-                <!-- Date & Time -->
-                <label for="feedback-date">Date of Experience</label>
-                <input type="date" id="feedback-date" name="feedback-date">
-
-                <label for="feedback-datetime">Feedback Submission Time</label>
-                <input type="datetime-local" id="feedback-datetime" name="feedback-datetime">
+                <!-- Date and Time Selection -->
+                <label for="feedback-datetime">Schedule Feedback Submission:</label>
+                <input type="datetime-local" id="feedback-datetime" name="feedback-datetime" required>
 
                 <!-- File Upload -->
                 <label for="screenshot">Attach a Screenshot (Optional)</label>
@@ -183,6 +150,8 @@
 
     </section>
 
+
+    <!-- footer-->
     <div class="footer">
         <div class="footer-column">
             <img src="/src/Logo_of_the_United_Nations_(B&W).svg.png" alt="UN Logo" class="footer-logo">
