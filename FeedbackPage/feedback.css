@@ -109,6 +109,22 @@ input, textarea, select {
     transition: border 0.3s ease-in-out;
 }
 
+select option:disabled {
+    color: black;
+    background-color: var(--background-color);
+}
+
+select option:disabled {
+    color: black;
+    background-color: var(--background-color);
+}
+
+/* Change the background color of the selected option */
+select option:checked {
+    background-color: #007BFF; /* Blue background for selected option */
+    color: white; /* White text on the selected option */
+}
+
 textarea {
     resize: vertical;
 }

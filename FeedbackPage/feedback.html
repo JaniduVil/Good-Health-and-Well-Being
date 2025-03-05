@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!------- Full-width Navigation Bar ------->
+    <!------- Full-width Navigation Bar -------> 
     <nav>
         <img src="/src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo">
         <ul id="navbar">          
@@ -37,16 +37,16 @@
             <fieldset>
                 <legend>Personal Details</legend>
                 
-                <label for="name">Full Name</label>
+                <label for="name">Full Name <span class="required">*</span></label>
                 <input type="text" id="name" name="name" required title="Please enter your full name">
 
-                <label for="email">Email Address</label>
+                <label for="email">Email Address <span class="required">*</span></label>
                 <input type="email" id="email" name="email" required title="Please enter a valid email address">
 
-                <label for="phone">Telephone Number</label>
+                <label for="phone">Telephone Number <span class="required">*</span></label>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter 10-digit number" title="Please enter a valid 10-digit phone number">
                 
-                <label>Preferred Contact Method:</label>
+                <label>Preferred Contact Method</label>
                 <div class="checkbox-section">
                     <input type="checkbox" id="contact-email" name="contact-method" value="email">
                     <label for="contact-email">Email</label>
@@ -58,12 +58,12 @@
                     <label for="contact-whatsapp">WhatsApp</label>
                 </div>
 
-                <label for="address">Address</label>
+                <label for="address">Address <span class="required">*</span></label>
                 <textarea id="address" name="address" rows="3" required maxlength="100" title="Max 100 characters"></textarea>
                 <!-- <p id="address-counter">100 characters remaining</p> -->
 
-                <label for="city">Your City:</label>
-                <input list="cities" id="city" name="city">
+                <label for="city">Your City <span class="required">*</span></label>
+                <input list="cities" id="city" name="city" required>
                 <datalist id="cities">
                     <option value="Colombo"></option>
                     <option value="Mount Lavinia"></option>
@@ -97,20 +97,37 @@
             <fieldset>
                 <legend>Feedback Details</legend>
 
-                <!-- Dropdown (Popup List) -->
-                <label for="feedback-type">Feedback Type</label>
-                <select id="feedback-type" name="feedback-type" required>
-                    <option value="" disabled selected>Select an option</option>
-                    <option value="bug">Report a Bug</option>
-                    <option value="suggestion">Suggestion</option>
-                    <option value="general">General Feedback</option>
+                <label for="feedback-type">Feedback Type <span class="required">*</span></label>
+                <select id="feedback-type" name="feedback-type" required size="5">
+                    <option value="" disabled >Select an option</option>
+                    <option value="bug">🐛Report a Bug</option>
+                    <option value="suggestion">💡Suggestion</option>
+                    <option value="complaint">😡 Complaint</option>
+                    <option value="praise">👏 Praise</option>
+                    <option value="inquiry">❓ Inquiry</option>
+                    <option value="feature-request">🔧 Feature Request</option>
+                    <option value="testimonial">🌟 Testimonial</option>
+                    <option value="issue">⚠️ Issue</option>
+                    <option value="general">📄General Feedback</option>
                 </select>
 
-                <label for="message">Your Feedback</label>
+
+                <label for="message">Your Feedback <span class="required">*</span></label>
                 <textarea id="message" name="message" rows="5" required maxlength="200" title="Max 200 characters"></textarea>
                 <p id="message-counter">200 characters remaining</p>
 
-
+                  <!-- Dropdown (Popup List) -->
+                  <label for="how-hear">How Did You Hear About Us?<span class="required">*</span></label>
+                  <select id="how-hear" name="how-hear" required>
+                      <option value=""disabled selected>Select an option</option>
+                      <option value="social-media">Social Media</option>
+                      <option value="search-engine">Search Engine</option>
+                      <option value="friend">Friend/Family</option>
+                      <option value="advertisement">Advertisement</option>
+                      <option value="other">Other</option>
+                  </select>
+                  
+                
                 <label for="rating">Rate Us:</label>
                 <div class="rating">
                     <span>😡</span>
@@ -133,9 +150,8 @@
                     </label>
                 </div>
                 
-
                 <!-- Date and Time Selection -->
-                <label for="feedback-datetime">Schedule Feedback Submission:</label>
+                <label for="feedback-datetime">Schedule Feedback Submission</label>
                 <input type="datetime-local" id="feedback-datetime" name="feedback-datetime" required>
 
                 <!-- File Upload -->
@@ -149,7 +165,6 @@
         </form>
 
     </section>
-
 
     <!-- footer-->
     <div class="footer">
@@ -177,7 +192,6 @@
                 <li><a href="/EditorsPage/EditorsPage_ST04.html">Sandanima Wahalathanthri</a></li>
             </ul>
         </div>
-        
     </div>
 
     <div class="copyright">
