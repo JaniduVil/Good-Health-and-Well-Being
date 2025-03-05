@@ -13,19 +13,18 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Container */
+
 .container {
     width: 97%;
     margin: 20px auto;
     padding: 10px;
 }
 
-/* Profile Section */
+
 .profile-wrapper {
     background: white;
     padding: 30px;
@@ -48,7 +47,7 @@ body {
     padding: 50px;
     border-radius: 12px;
     text-align: center;
-    font-size: 20px; /* Adjusted */
+    font-size: 18px;
     width: 90%;
 }
 
