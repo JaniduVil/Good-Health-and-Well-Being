@@ -36,6 +36,8 @@ body {
     margin-bottom: 30px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid var(--border-color);
+
 }
 
 .profile-wrapper:hover {
@@ -52,14 +54,19 @@ body {
 }
 
 .avatar {
-    width: 140px;
-    height: 140px;
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
     border: 4px solid var(--primary-color);
     object-fit: cover;
+    margin-bottom: 10px;
 }
 
-.user-info1 h2 {
+.profile-container h2, .profile-container p {
+    margin: 5px 0;
+}
+
+.profile-container h2 {
     color: var(--primary-color);
 }
 
@@ -75,6 +82,7 @@ body {
     margin-bottom: 30px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid var(--border-color);
 }
 
 .about-me-wrapper:hover {
@@ -87,7 +95,7 @@ body {
     padding: 50px;
     border-radius: 12px;
     width: 95%;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .about-me h3 {
@@ -104,7 +112,8 @@ body {
     margin-bottom: 15px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
+    border: 1px solid var(--border-color);
 }
 
 .section:hover {
@@ -112,8 +121,7 @@ body {
 }
 
 .section h3 {
-    color: var(--primary-color);
-    font-size: 26px;
+    font-size: 24px;
 }
 
 /* Contact Form */
@@ -126,7 +134,8 @@ body {
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 21px;
+    border: 1px solid var(--border-color);
 }
 
 .contact-form:hover {
@@ -139,27 +148,28 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .contact-form button {
-    width: 99.5%;
+    width: 101.5%;
     padding: 15px;
-    background: var(--cta-color);
+    background: #007BFF;
     border: none;
     cursor: pointer;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 16px;
+    color: white;
 }
 
 .contact-form button:hover {
-    background-color: darkorange;
+    background-color: #0056B3;
 }
 
 /* Grid Containers */
 .grid-container1 {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 0.6fr 2fr;
     gap: 20px;
     align-items: stretch;
     width: 100%;
@@ -171,7 +181,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 300px;
-    /* font-size: 20px; */
 }
 
 .grid-container {
@@ -186,7 +195,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .skill-bar {
@@ -203,22 +212,76 @@ body {
     background: var(--primary-color);
 }
 
-/* Schedule Table */
-.schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 20px;
+.goal-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
-.schedule-table th, .schedule-table td {
+.goal-bar {
+    width: 50%;
+    height: 12px;
+    background: var(--border-color);
+    border-radius: 5px;
+    position: relative;
+}
+
+.fill {
+    display: block;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.availability {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 21px;
+    border: 1px solid var(--border-color);
+}
+
+.availability:hover {
+    transform: scale(1.02);
+}
+.availability table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.availability table th, .availability table td {
     border: 1px solid var(--border-color);
     padding: 12px;
     text-align: left;
     font-size: 18px;
 }
 
-.schedule-table th {
+.availability table th {
     background: var(--primary-color);
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.volunteering-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+}
+
+.volunteering-icon {
+    width: 40px; /* Adjust according to nav icon size */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.volunteering-header h3 {
+    margin: 0; /* Ensures proper alignment */
+    font-size: 1.2em;
 }
