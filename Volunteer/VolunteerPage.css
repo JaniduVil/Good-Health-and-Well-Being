@@ -206,9 +206,8 @@ background-color: #ccc;
 color: black;
 }
 
-.feedback-form .buttons button:hover {
-opacity: 0.9;
-}
+
+
 .program-table {
 margin-top: 1rem;
 border-collapse: collapse;

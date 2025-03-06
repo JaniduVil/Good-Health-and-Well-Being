@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     color: var(--text-color);
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -55,7 +55,7 @@ form {
 fieldset {
     border: 2px solid var(--border-color);
     border-radius: 8px;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* Style the checkbox section */
@@ -70,6 +70,19 @@ fieldset .checkbox-section {
     margin: 5px 0; /* Add margin for top and bottom of each label */
 }
 
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin: 5px;
+    margin-bottom: 25px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
 
 legend {
@@ -94,6 +107,22 @@ input, textarea, select {
     font-size: 16px;
     outline: none;
     transition: border 0.3s ease-in-out;
+}
+
+select option:disabled {
+    color: black;
+    background-color: var(--background-color);
+}
+
+select option:disabled {
+    color: black;
+    background-color: var(--background-color);
+}
+
+/* Change the background color of the selected option */
+select option:checked {
+    background-color: #007BFF; /* Blue background for selected option */
+    color: white; /* White text on the selected option */
 }
 
 textarea {
@@ -137,7 +166,7 @@ p {
 }
 
 /* Rating Section */
-.rating {
+/* .rating {
     display: flex;
     justify-content: center;
     gap: 12px;
@@ -152,7 +181,28 @@ p {
 
 .rating label:hover {
     transform: scale(1.2);
+} */
+
+/* Rating Container */
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 2rem;
+    cursor: pointer;
 }
+
+/* Default Style */
+.rating span {
+    transition: transform 0.2s, color 0.2s;
+}
+
+/* Hover Effect - Only the hovered emoji enlarges */
+.rating span:hover {
+    transform: scale(1.2);
+    color: gold;
+}
+
 
 /* Hide radio buttons for rating */
 .rating input[type="radio"] {
