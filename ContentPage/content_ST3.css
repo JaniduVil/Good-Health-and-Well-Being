@@ -1,0 +1,232 @@
+:root {
+    --primary-color: #28A745;
+    --secondary-color: #81C784;
+    --background-color: #F4F4F4;
+    --text-color: #333333;
+    --border-color: #D9D9D9;
+    --cta-color: #FFC107;
+    --error-color: #E57373;
+    --success-color: #66BB6A;
+    --link-color: #1976D2;
+}
+
+#banner {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.banner-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Layout Wrapper */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 83%;
+    margin: auto;
+    padding: 20px;
+}
+
+.content-wrapper p {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Internal Navigation on the Left */
+.internal-nav {
+    width: 35%;
+    position: sticky;
+    top: 100px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    margin-left: -2%;
+}
+
+.internal-nav a {
+    display: block;
+    padding: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.internal-nav a:last-child {
+    border-bottom: none;
+}
+
+.internal-nav a:hover {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+}
+
+/* Main content on the Right */
+.main-content {
+    width: 70%;
+    padding-left: 30px;
+}
+
+section {
+    padding: 40px;
+    background: white;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+h3 {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+h4 {
+    color: var(--secondary-color);
+}
+
+.content-img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Fitness Tips Grid */
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+.tip {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scale effect on hover */
+    position: relative;
+    overflow: hidden;
+}
+
+.tip:hover {
+    transform: scale(1.05); /* Scale up the box */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Add a stronger shadow effect on hover */
+}
+
+.tip img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.tip p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.tip-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0; /*Position it at the top of the .tip box */
+    left: 0; /* Ensure it spans the entire width */
+   /* width: 100%; /*Cover the full width */
+    height: 100%; /* Cover the full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Darkened background for better readability */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for visibility and opacity */
+    z-index: 1; /* Ensure the description is on top of the image */
+    overflow: hidden;
+}
+
+.tip-description p {
+    margin: 0; /* Remove margin inside the description */
+}
+
+.tip:hover .tip-description {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Resources Section */
+#resources {
+    background-color: var(--background-color);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#resources h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+#resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resources ul li {
+    margin: 10px 0;
+}
+
+#resources ul li a {
+    display: block;
+    background-color: var(--link-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#resources ul li a:hover {
+    background-color: #0056b3;
+}
