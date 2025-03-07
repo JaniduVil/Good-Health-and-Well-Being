@@ -7,9 +7,11 @@ body {
 table {
     width: 100%;
     border-radius: 10px;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     background: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 th, td {
     border: 1px solid #ddd;
