@@ -1,30 +1,41 @@
 :root {
     --primary-color: #4CAF50;
-    --secondary-color: #81C784;
-    --background-color: #f2fff8;
-    --text-color: #333333;
+    --secondary-color: #C8F7C5;
     --border-color: #D9D9D9;
-    --cta-color: #FFC107;
-    --error-color: #E57373;
-    --success-color: #66BB6A;
-    --link-color: #1976D2;
 }
 
 body {
-    background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
-
+/* Container */
 .container {
     width: 97%;
     margin: 20px auto;
     padding: 10px;
 }
 
+/* 1st grid */
+.grid-1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: stretch;
+    width: 100%;
+}
 
+/* profile and about-me aligning */
+.profile, .about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+/* profile outline - hold the 'profile' section. Use for styling */
 .profile-wrapper {
     background: white;
     padding: 30px;
@@ -44,7 +55,8 @@ body {
     transform: scale(1.02);
 }
 
-.profile-container {
+/* profile detail - hold the profile picture and content */
+.profile {
     background: #C8F7C5;
     padding: 50px;
     border-radius: 12px;
@@ -53,6 +65,17 @@ body {
     width: 90%;
 }
 
+/* Maintain line spacing in the content of profile */
+.profile h2, .profile p {
+    margin: 5px 0;
+}
+
+/* Maintain profile name color */
+.profile h2 {
+    color: var(--primary-color);
+}
+
+/* profile picture */
 .avatar {
     width: 190px;
     height: 190px;
@@ -62,15 +85,7 @@ body {
     margin-bottom: 10px;
 }
 
-.profile-container h2, .profile-container p {
-    margin: 5px 0;
-}
-
-.profile-container h2 {
-    color: var(--primary-color);
-}
-
-/* About Me Section */
+/* about-me outline - hold the 'about-me' section. Use for styling */
 .about-me-wrapper {
     background: white;
     padding: 30px;
@@ -89,8 +104,10 @@ body {
     transform: scale(1.02);
 }
 
+/* about-me detail - hold the content */
 .about-me {
-    text-align: center;
+    text-align: justify;
+    line-height: 1.4;
     background: #C8F7C5;
     padding: 50px;
     border-radius: 12px;
@@ -98,12 +115,22 @@ body {
     font-size: 18px;
 }
 
+/* Maintain about-me header */
 .about-me h3 {
+    text-align: center;
     color: var(--primary-color);
     font-size: 26px;
 }
 
-/* General Sections */
+/* 2st grid*/
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Maintain a common class for skills, goals, volunteering and interest. Can style all sections with this */
 .section {
     background: white;
     padding: 25px;
@@ -124,7 +151,148 @@ body {
     font-size: 24px;
 }
 
-/* Contact Form */
+/* Maintain skill header with the icon */
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* skill icon */
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.skill-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* skill percentage bar */
+.skill-bar {
+    width: 70%;
+    height: 12px;
+    background: var(--border-color);
+    border-radius: 5px;
+    position: relative;
+}
+
+.fill {
+    display: block;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+/* Maintain goal header with the icon */
+.goal-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* goal icon */
+.goal-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.goal-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* goal percentage bar */
+.goal-bar {
+    width: 50%;
+    height: 12px;
+    background: var(--border-color);
+    border-radius: 5px;
+    position: relative;
+}
+
+.fill {
+    display: block;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+/* Maintain volunteering header with the icon */
+.volunteering-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* volunteering icon */
+.volunteering-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Maintain interest header with the icon */
+.interest-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* interest icon */
+.interest-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* availability section */
+.availability {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 21px;
+    border: 1px solid var(--border-color);
+}
+
+.availability:hover {
+    transform: scale(1.02);
+}
+/* availability table */
+.availability table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.availability table th, .availability table td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.availability table th {
+    background: var(--primary-color);
+    color: white;
+    font-size: 18px;
+}
+
+/* Contat me section */
 .contact-form {
     background: white;
     padding: 25px;
@@ -152,7 +320,7 @@ body {
 }
 
 .contact-form button {
-    width: 101.5%;
+    width: 100%;
     padding: 15px;
     background: #007BFF;
     border: none;
@@ -160,128 +328,10 @@ body {
     border-radius: 8px;
     font-size: 16px;
     color: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .contact-form button:hover {
     background-color: #0056B3;
-}
-
-/* Grid Containers */
-.grid-container1 {
-    display: grid;
-    grid-template-columns: 0.6fr 2fr;
-    gap: 20px;
-    align-items: stretch;
-    width: 100%;
-}
-
-.profile-container, .about-me {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 300px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    width: 100%;
-}
-
-/* Skills Section */
-.skill-list li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.skill-bar {
-    width: 70%;
-    height: 12px;
-    background: var(--border-color);
-    border-radius: 5px;
-    position: relative;
-}
-
-.fill {
-    display: block;
-    height: 100%;
-    background: var(--primary-color);
-}
-
-.goal-list li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.goal-bar {
-    width: 50%;
-    height: 12px;
-    background: var(--border-color);
-    border-radius: 5px;
-    position: relative;
-}
-
-.fill {
-    display: block;
-    height: 100%;
-    background: var(--primary-color);
-}
-
-.availability {
-    background: white;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
-    font-size: 21px;
-    border: 1px solid var(--border-color);
-}
-
-.availability:hover {
     transform: scale(1.02);
-}
-.availability table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 18px;
-}
-
-.availability table th, .availability table td {
-    border: 1px solid var(--border-color);
-    padding: 12px;
-    text-align: left;
-    font-size: 18px;
-}
-
-.availability table th {
-    background: var(--primary-color);
-    color: white;
-    font-size: 18px;
-}
-
-.volunteering-header {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between image and text */
-}
-
-.volunteering-icon {
-    width: 40px; /* Adjust according to nav icon size */
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.volunteering-header h3 {
-    margin: 0; /* Ensures proper alignment */
-    font-size: 1.2em;
 }
