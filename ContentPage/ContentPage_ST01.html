@@ -3,179 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mental Wellness</title>
+    <title>Physical Fitness</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <link rel="stylesheet" href="/Home/home.css">
-    <style>
-      /* Hero Section */
-        #banner {
-            position: relative;
-            text-align: center;
-        }
-
-        .banner-img {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-            filter: brightness(70%);
-            
-        }
-
-        .banner-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 2.5rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Sections */
-        section {
-            padding: 40px;
-            background: white;
-            margin: 30px auto;
-            width: 80%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #4CAF50;
-        }
-
-        .content-img {
-            width: 100%;
-            max-width: 600px;
-            display: block;
-            margin: 20px auto;
-            border-radius: 10px;
-        }
-
-        /* Wellness Tips Grid */
-        .tips-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .tip {
-            text-align: center;
-            background: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .tip img {
-            width: 100%;
-            height: 150px;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-
-        .tip p {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        .footer {
-            display: flex;
-            justify-content: space-around;
-            background: #4CAF50;
-            color: white;
-            padding: 20px;
-        }
-
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-column a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .copyright {
-            text-align: center;
-            background: #388E3C;
-            color: white;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="content_ST3.css">
 </head>
 <body>
+    <!------- Full-width Navigation Bar -------> 
     <nav>
-        <img src="/src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="Logo" id="logo">
+        <img src="/src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo">
         <ul id="navbar">          
-            <li><a href="/Home/home.css">Home</a></li>
+            <li><a href="/Home/home.html">Home</a></li>
             <li><a href="/Volunteer/VolunteerPage.html">Volunteer</a></li>
-            <li><a href="/Data/Data.html">Data</a></li>
+            <li><a href="#">Table</a></li>
             <li><a href="#">Sitemap</a></li>
             <li><a href="/TeamPage/team.html">Team</a></li>
-            <li><a href="/FeedbackPage/feedback.html">Feedback</a></li>
+            <li><a href="/EditorsPage/editorsPage.html">Editors</a></li>
+            <li><a href="/Good-Health-and-Well-Being/FeedbackPage/dockerps/feedback.html">Feedback</a></li>
         </ul>
+        <div id="nav-icon">
+            <a href="/ProfilePage/profilepage.html"><img src="/src/profile-user(1).png" class="icon" alt=""></a>
+        </div>
     </nav>
 
     <section id="banner">
-        <img src="mental-wellness-banner.jpg" alt="Mental Wellness" class="banner-img">
-        <div class="banner-text">Prioritize Your Mental Wellness</div>
+        <img src="/src/physical-fitness-banner.png" alt="Physical Fitness" class="banner-img">
+        <div class="banner-text">Achieve Your Best Physical Fitness</div>
     </section>
 
-    <section id="about">
-        <h2>About Mental Wellness</h2>
-        <p>Mental wellness is essential for a balanced and fulfilling life. It includes emotional well-being, stress management, and self-care.</p>
-        <!-- <img src="mental-wellness-banner.jpg" alt="Mental health care" class="content-img"> -->
-    </section>
+    <div class="content-wrapper">
+        <aside class="internal-nav">
+            <a href="#about">About Physical Fitness</a>
+            
+            <!-- Key Components Section with Subtopics -->
+            <div class="nav-section">
+                <a href="#key-components">Key Components of Physical Fitness</a>
+                <div class="sub-nav">
+                    <a href="#cardiovascular-endurance">Cardiovascular Endurance</a>
+                    <a href="#muscular-strength">Muscular Strength & Endurance</a>
+                    <a href="#flexibility-mobility">Flexibility & Mobility</a>
+                    <a href="#body-composition">Body Composition</a>
+                    <a href="#mental-wellbeing">Mental & Emotional Well-being</a>
+                </div>
+            </div>
+            
+            <!-- Fitness Tips Section -->
+            <a href="#tips">Fitness Tips</a>
+            
+            <!-- Resources Section -->
+            <a href="#resources">Resources</a>
+        </aside>
 
-    <section id="tips">
-        <h2>Wellness Tips</h2>
-        <div class="tips-container">
-            <div class="tip">
-                <img src="mental-wellness-banner.jpg" alt="Mindfulness">
-                <p>Practice mindfulness and meditation.</p>
-            </div>
-            <div class="tip">
-                <img src="mental-wellness-banner.jpg" alt="Exercise">
-                <p>Exercise regularly to boost mood.</p>
-            </div>
-            <div class="tip">
-                <img src="mental-wellness-banner.jpg" alt="Healthy food">
-                <p>Maintain a healthy diet and sleep schedule.</p>
-            </div>
-            <div class="tip">
-                <img src="mental-wellness-banner.jpg" alt="Friends">
-                <p>Stay connected with family and friends.</p>
-            </div>
-        </div>
-    </section>
+        <main class="content">
+            <section id="about">
+                <h2>About Physical Fitness</h2>
+                <p>Physical fitness is essential for maintaining overall health and well-being. It involves engaging in activities that enhance physical strength, flexibility, endurance, and mental wellness. A well-rounded fitness routine incorporates various elements, including exercise, nutrition, rest, and lifestyle choices.</p>
+            
+                <div class="fitness-components">
+                    <h3>Key Components of Physical Fitness</h3>
+            
+                    <div class="component">
+                        <h4>Cardiovascular Endurance</h4>
+                        <p>Cardiovascular endurance refers to the ability of the heart, lungs, and blood vessels to deliver oxygen to the body during prolonged physical activity. It's important for overall stamina and health.</p>
+                    </div>
+            
+                    <div class="component">
+                        <h4>Muscular Strength & Endurance</h4>
+                        <p>Muscular strength refers to the amount of force a muscle can produce, while muscular endurance is the ability of muscles to sustain repeated contractions over time.</p>
+                    </div>
+            
+                    <div class="component">
+                        <h4>Flexibility & Mobility</h4>
+                        <p>Flexibility is the range of motion in your joints and muscles, while mobility refers to the ability to move freely without stiffness.</p>
+                    </div>
+            
+                    <div class="component">
+                        <h4>Body Composition</h4>
+                        <p>Body composition is the ratio of fat to lean mass in the body. Maintaining a healthy body composition reduces the risk of obesity-related diseases.</p>
+                    </div>
+            
+                    <div class="component">
+                        <h4>Mental & Emotional Well-being</h4>
+                        <p>Physical fitness also plays a significant role in mental and emotional health by reducing stress and improving mood.</p>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <section id="tips">
+                <h2>Fitness Tips: Physical Activities</h2>
+                <div class="tips-container">
+                    <div class="tip" data-description="Go for a run or jog to improve cardiovascular health.">
+                        <img src="/src/running.png" alt="Running">
+                        <p>Go for a run or jog to improve cardiovascular health.</p>
+                        <div class="tip-description">Running or jogging increases your heart rate, improves cardiovascular endurance, and burns calories, helping maintain a healthy heart.</div>
+                    </div>
+                    <div class="tip" data-description="Ride a bicycle to strengthen legs and boost endurance.">
+                        <img src="/src/cycling.png" alt="Cycling">
+                        <p>Ride a bicycle to strengthen legs and boost endurance.</p>
+                        <div class="tip-description">Cycling works your lower body, particularly the quadriceps, hamstrings, and calves, while enhancing aerobic fitness and endurance.</div>
+                    </div>
+                    <div class="tip" data-description="Do strength training exercises to build muscle mass.">
+                        <img src="/src/strength-training.png" alt="Strength Training">
+                        <p>Do strength training exercises to build muscle mass.</p>
+                        <div class="tip-description">Strength training improves muscle strength, increases metabolism, and enhances bone health, while also promoting fat loss.</div>
+                    </div>
+                    <div class="tip" data-description="Practice yoga to improve flexibility and mental relaxation.">
+                        <img src="/src/yoga.png" alt="Yoga">
+                        <p>Practice yoga to improve flexibility and mental relaxation.</p>
+                        <div class="tip-description">Yoga helps to increase flexibility, reduce stress, improve posture, and enhance mental clarity and relaxation through breathing exercises.</div>
+                    </div>
+                    <div class="tip" data-description="Swim regularly for full-body exercise and lung capacity improvement.">
+                        <img src="/src/swimming.png" alt="Swimming">
+                        <p>Swim regularly for full-body exercise and lung capacity improvement.</p>
+                        <div class="tip-description">Swimming engages multiple muscle groups, improving cardiovascular health, enhancing lung capacity, and promoting overall body strength and endurance.</div>
+                    </div>
+                    <div class="tip" data-description="Go hiking to strengthen leg muscles and enjoy nature.">
+                        <img src="/src/hiking.png" alt="Hiking">
+                        <p>Go hiking to strengthen leg muscles and enjoy nature.</p>
+                        <div class="tip-description">Hiking offers a great leg workout, improves balance, and enhances endurance while also providing mental relaxation and a connection to nature.</div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
 
     <section id="resources">
         <h2>Helpful Resources</h2>
         <ul>
             <li><a href="#">World Health Organization</a></li>
-            <li><a href="#">Mental Health America</a></li>
-            <li><a href="#">National Alliance on Mental Illness</a></li>
+            <li><a href="#">American Council on Exercise</a></li>
+            <li><a href="#">National Physical Fitness Foundation</a></li>
         </ul>
     </section>
 
     <div class="footer">
         <div class="footer-column">
+            <img src="/src/Logo_of_the_United_Nations_(B&W).svg.png" alt="UN Logo" class="footer-logo">
+        </div>
+        <div class="footer-column">
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="#navbar">Home</a></li>
                 <li><a href="/Volunteer/VolunteerPage.html">Volunteer</a></li>
+                <li><a href="/Data/Data.html">Data</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="/ProfilePage/profilepage.html">User Profile</a></li>
+                <li><a href="/FeedbackPage/feedback.html">Feedback</a></li>
+                <li><a href="/TeamPage/team.html">Team</a></li>
             </ul>
         </div>
+        <div class="footer-column">
+            <h3>Our Editors</h3>
+            <ul>
+                <li><a href="/EditorsPage/EditorsPage_ST01.html">Janidu Jayasundara</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST02.html">Nirmal Ranasinghe</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST03.html">Detuni Amaya</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST04.html">Sandanima Wahalathanthri</a></li>
+            </ul>
+        </div>
+        
     </div>
 
     <div class="copyright">
-        <p>Copyright &copy; All Rights Reserved.</p>
+        <p>Copyright © . All Right Reserved. </p>
     </div>
 </body>
 </html>
