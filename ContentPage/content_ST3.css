@@ -235,7 +235,7 @@ h4 {
 }
 
 #resources ul li a:hover {
-    background-color: #1976D2;
-    color: black;
+    background-color: white;
+    color: #28A745;
     transform: scale(1.05);
 }
