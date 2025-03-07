@@ -42,14 +42,14 @@
 .content-wrapper {
     display: flex;
     align-items: flex-start;
-    width: 80%;
+    width: 83%;
     margin: auto;
     padding: 20px;
 }
 
 /* Internal Navigation on the Left */
 .internal-nav {
-    width: 30%;
+    width: 35%;
     position: sticky;
     top: 100px;
     background: rgba(255, 255, 255, 0.9);
@@ -57,16 +57,16 @@
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     height: fit-content;
-    margin-left: -10%;
+    margin-left: -2%;
 }
 
 .internal-nav a {
     display: block;
     padding: 10px;
-    color: #4CAF50;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .internal-nav a:last-child {
@@ -74,14 +74,14 @@
 }
 
 .internal-nav a:hover {
-    background: #4CAF50;
+    background: var(--primary-color);
     color: white;
     border-radius: 5px;
 }
 
 /* Main content on the Right */
 .main-content {
-    width: 75%;
+    width: 70%;
     padding-left: 30px;
 }
 
@@ -98,13 +98,13 @@ h2 {
 }
 
 h3 {
-    color: #2c3e50;
-    border-bottom: 2px solid #27ae60; /* Green */
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 5px;
 }
 
 h4 {
-    color: #309a5c; /* Lighter Green */
+    color: var(--secondary-color);
 }
 
 .content-img {
@@ -121,14 +121,24 @@ h4 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     justify-content: center;
+    width: 100%;
+    margin: auto;
 }
 
 .tip {
     text-align: center;
     background: #fff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scale effect on hover */
+    position: relative;
+    overflow: hidden;
+}
+
+.tip:hover {
+    transform: scale(1.05); /* Scale up the box */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Add a stronger shadow effect on hover */
 }
 
 .tip img {
@@ -143,9 +153,40 @@ h4 {
     font-weight: bold;
 }
 
+.tip-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0; /*Position it at the top of the .tip box */
+    left: 0; /* Ensure it spans the entire width */
+   /* width: 100%; /*Cover the full width */
+    height: 100%; /* Cover the full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Darkened background for better readability */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for visibility and opacity */
+    z-index: 1; /* Ensure the description is on top of the image */
+    overflow: hidden;
+}
+
+.tip-description p {
+    margin: 0; /* Remove margin inside the description */
+}
+
+.tip:hover .tip-description {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Resources Section */
 #resources {
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
     padding: 40px 20px;
     text-align: center;
     border-radius: 10px;
@@ -156,7 +197,7 @@ h4 {
 #resources h2 {
     font-size: 24px;
     font-weight: 600;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
@@ -171,7 +212,7 @@ h4 {
 
 #resources ul li a {
     display: block;
-    background-color: #007bff;
+    background-color: var(--link-color);
     color: white;
     text-decoration: none;
     padding: 10px 15px;
