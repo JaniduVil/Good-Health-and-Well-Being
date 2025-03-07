@@ -192,41 +192,50 @@ h4 {
 
 /* Resources Section */
 #resources {
-    background-color: var(--background-color);
-    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #ffffff, #6bd883);
+    color: white;
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 800px;
 }
 
 #resources h2 {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--text-color);
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
 #resources ul {
     list-style-type: none;
     padding: 0;
+    width: 100%;
 }
 
 #resources ul li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 #resources ul li a {
     display: block;
-    background-color: var(--link-color);
-    color: white;
+    background-color: white;
+    color: var(--primary-color);
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 18px;
+    border-radius: 8px;
     font-size: 18px;
-    transition: background-color 0.3s ease-in-out;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
 
 #resources ul li a:hover {
-    background-color: #0056b3;
+    background-color: #1976D2;
+    color: black;
+    transform: scale(1.05);
 }
