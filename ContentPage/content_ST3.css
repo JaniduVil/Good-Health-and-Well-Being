@@ -47,6 +47,12 @@
     padding: 20px;
 }
 
+.content-wrapper p {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 /* Internal Navigation on the Left */
 .internal-nav {
     width: 35%;
