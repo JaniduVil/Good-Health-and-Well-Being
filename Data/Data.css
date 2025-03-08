@@ -1,9 +1,18 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 20px;
-    background-color: #f4f4f4;
+    font-family: Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f2fff8;
 }
+
+.main-container {
+    background-color: #f2fff8;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 10%;
+}
+
 table {
     width: 100%;
     border-radius: 10px;

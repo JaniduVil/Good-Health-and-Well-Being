@@ -14,10 +14,11 @@
 body {
     /* background-color: var(--background-color); */
     color: var(--text-color);
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f2fff8;
 }
 
 .feedback-container {
