@@ -60,17 +60,6 @@ html, body {
     transform: scale(1.05);
 }
 
-/* .banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-} */
-
 .banner-text {
     position: absolute;
     top: 50%;
@@ -99,19 +88,20 @@ html, body {
     }
 }
 
+/* ------------------- Benefits Section ------------------- */
 .benefits-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Adds spacing between image and list */
+    gap: 20px;
 }
 
 .benefits-image {
-    width: 300px; /* Adjust as needed */
+    width: 300px;
     height: auto;
-    border-radius: 10px; /* adds rounded corners */
+    border-radius: 10px;
 }
 
-/* Layout Wrapper */
+/* ------------------- Layout Wrapper ------------------- */
 .content-wrapper {
     display: flex;
     align-items: flex-start;
@@ -120,15 +110,15 @@ html, body {
     padding: 10px;
 }
 
-.content-wrapper p,li {
+.content-wrapper p, .content-wrapper li {
     color: var(--text-color);
     font-size: 16px;
     line-height: 1.6;
 }
 
-/* Internal Navigation on the Left */
+/* ------------------- Internal Navigation ------------------- */
 .internal-nav {
-    width: 100%;
+    width: 60%;
     position: sticky;
     top: 100px;
     background: rgba(255, 255, 255, 0.9);
@@ -137,8 +127,9 @@ html, body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     height: fit-content;
     margin-left: 0;
-    margin-right: 5%;
+    margin-right: 3%;
     margin-top: 20px;
+    font-size: 18px;
 }
 
 .internal-nav a {
@@ -160,7 +151,7 @@ html, body {
     border-radius: 5px;
 }
 
-/* Main content on the Right */
+/* ------------------- Main Content ------------------- */
 .main-content {
     width: 70%;
     padding-left: 30px;
@@ -169,14 +160,14 @@ html, body {
 section {
     padding: 40px;
     background: white;
-    margin:20px auto;
+    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
 }
 
 h2 {
     color: var(--primary-color);
+    font-size: 20px;
 }
 
 h3 {
@@ -186,7 +177,7 @@ h3 {
 }
 
 h4 {
-    color:rgb(9, 87, 22);
+    color: rgb(9, 87, 22);
     font-size: 17px;
 }
 
@@ -198,7 +189,7 @@ h4 {
     border-radius: 10px;
 }
 
-/* Fitness Tips Grid */
+/* ------------------- Fitness Tips Grid ------------------- */
 .tips-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -214,14 +205,14 @@ h4 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scale effect on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
 .tip:hover {
-    transform: scale(1.05); /* Scale up the box */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Add a stronger shadow effect on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .tip img {
@@ -241,126 +232,65 @@ h4 {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0; /*Position it at the top of the .tip box */
-    left: 0; /* Ensure it spans the entire width */
-   /* width: 100%; /*Cover the full width */
-    height: 100%; /* Cover the full height */
-    background-color: rgba(0, 0, 0, 0.7); /* Darkened background for better readability */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 20px;
     border-radius: 10px;
     font-size: 16px;
     text-align: center;
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Initially hidden */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for visibility and opacity */
-    z-index: 1; /* Ensure the description is on top of the image */
-    overflow: hidden;
-    font-weight: bold;
-}
-
-.tip-description p {
-    margin: 0; /* Remove margin inside the description */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1;
 }
 
 .tip:hover .tip-description {
     opacity: 1;
     visibility: visible;
-  }
+}
 
-/* Resources Section */
-/* #resources {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(135deg, #ffffff, #6bd883);
-    color: white;
-    padding: 30px 20px;
-    border-radius: 12px;
-    margin: 40px auto;
-    max-width: 80%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+/* ------------------- Resources Section ------------------- */
+#resources {
+    background-color: rgba(192, 241, 203, 0.557);
+    padding: 5px 20px;
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    width: 100%;
     text-align: center;
 }
 
 #resources h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#resources ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-}
-
-#resources ul li {
-    margin: 15px 0;
-}
-
-#resources ul li a {
-    display: block;
-    background-color: white;
     color: var(--primary-color);
-    text-decoration: none;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-}
-
-#resources ul li a:hover {
-    background-color: white;
-    color: #28A745;
-    transform: scale(1.05);
-} */
-/* Helpful Resources Section */
-#resources {
-    background-color: rgba(192, 241, 203, 0.557); /*var(--background-color); /* Light background */
-    padding: 5px 20px; /* Thin padding */
-    border-top: 3px solid var(--primary-color); /* Green top border */
-    border-bottom: 3px solid var(--primary-color); /* Green bottom border */
-    width: 100%; /* Full-width */
-    text-align: center; /* Center text */
-    border-radius: 0%;
-}
-
-/* Heading Style */
-#resources h2 {
-    color: var(--primary-color); /* Green */
     font-size: 28px;
     margin: 10px;
-    top: 0;
 }
 
-/* List Style */
 #resources ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    gap: 50px; /* Spacing between items */
+    justify-content: center;
+    gap: 50px;
 }
 
-/* Link Styling */
 #resources a {
     text-decoration: none;
-    color: var(--link-color); /* Blue */
+    color: var(--link-color);
     font-weight: bold;
     font-size: 18px;
     transition: color 0.3s ease-in-out;
 }
 
-/* Hover Effect */
 #resources a:hover {
-    color: var(--secondary-color); /* Light green */
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
-/* Go to Top Button */
+/* ------------------- Go to Top Button ------------------- */
 #go-to-top {
     position: fixed;
     bottom: 20px;
