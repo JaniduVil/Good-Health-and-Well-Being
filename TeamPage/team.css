@@ -47,7 +47,8 @@ body {
     border-radius: 12px;
     padding: 25px;
     text-align: center;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
