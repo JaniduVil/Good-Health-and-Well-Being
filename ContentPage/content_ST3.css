@@ -90,6 +90,18 @@
     }
 }
 
+.benefits-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds spacing between image and list */
+}
+
+.benefits-image {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
 /* Layout Wrapper */
 .content-wrapper {
     display: flex;
