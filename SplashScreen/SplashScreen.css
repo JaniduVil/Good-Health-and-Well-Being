@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: Helvetica, sans-serif;
   background: url("/src/a1.png") no-repeat center center fixed;
   background-size: cover;
   display: flex;
