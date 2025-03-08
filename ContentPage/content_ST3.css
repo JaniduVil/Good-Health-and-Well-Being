@@ -308,3 +308,23 @@ h4 {
     color: #28A745;
     transform: scale(1.05);
 }
+
+/* Go to Top Button */
+#go-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cta-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#go-to-top:hover {
+    background-color: var(--primary-color);
+}
