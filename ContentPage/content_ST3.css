@@ -99,14 +99,14 @@
 .benefits-image {
     width: 300px; /* Adjust as needed */
     height: auto;
-    border-radius: 10px; /* Optional: adds rounded corners */
+    border-radius: 10px; /* adds rounded corners */
 }
 
 /* Layout Wrapper */
 .content-wrapper {
     display: flex;
     align-items: flex-start;
-    width: 80%;
+    width: 93%;
     margin: auto;
     padding: 10px;
 }
@@ -127,7 +127,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     height: fit-content;
-    margin-left: -10%;
+    margin-left: 0;
     margin-right: 5%;
     margin-top: 20px;
 }
