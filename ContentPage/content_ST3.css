@@ -260,7 +260,7 @@ h4 {
   }
 
 /* Resources Section */
-#resources {
+/* #resources {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -307,6 +307,48 @@ h4 {
     background-color: white;
     color: #28A745;
     transform: scale(1.05);
+} */
+/* Helpful Resources Section */
+#resources {
+    background-color: rgba(192, 241, 203, 0.557); /*var(--background-color); /* Light background */
+    padding: 5px 20px; /* Thin padding */
+    border-top: 3px solid var(--primary-color); /* Green top border */
+    border-bottom: 3px solid var(--primary-color); /* Green bottom border */
+    width: 100%; /* Full-width */
+    text-align: center; /* Center text */
+    border-radius: 0%;
+}
+
+/* Heading Style */
+#resources h2 {
+    color: var(--primary-color); /* Green */
+    font-size: 28px;
+    margin: 10px;
+    top: 0;
+}
+
+/* List Style */
+#resources ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    gap: 50px; /* Spacing between items */
+}
+
+/* Link Styling */
+#resources a {
+    text-decoration: none;
+    color: var(--link-color); /* Blue */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#resources a:hover {
+    color: var(--secondary-color); /* Light green */
+    text-decoration: underline;
 }
 
 /* Go to Top Button */
