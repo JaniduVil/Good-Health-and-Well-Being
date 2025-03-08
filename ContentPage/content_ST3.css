@@ -102,8 +102,9 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     height: fit-content;
     margin-left: 0;
-    margin-right: 5%;
+    margin-right: 3%;
     margin-top: 20px;
+    font-size: 20px;
 }
 
 .internal-nav a {
@@ -141,6 +142,7 @@ section {
 
 h2 {
     color: var(--primary-color);
+    font-size: 20px;
 }
 
 h3 {
