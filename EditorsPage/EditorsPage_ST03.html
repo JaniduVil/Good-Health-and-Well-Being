@@ -75,38 +75,140 @@
                 <h2 id="team">Team Page</h2>
                     <h3>Technical Description</h3>
                     <p>
-                        The Team Page is developed using HTML and CSS to provide an interactive and accessible display of team members' profiles. The page structure follows a responsive layout, ensuring a seamless experience across various screen sizes.
+                        The HTML and CSS techniques used in the Team Page focus on a clean, user-friendly design with interactivity and accessibility.
                     </p>
-                    <p>
-                        Key HTML elements include:
-                        <ul>
-                            <li><strong>&lt;section&gt;</strong> and <strong>&lt;article&gt;</strong> tags to structure content semantically.</li>
-                            <li><strong>&lt;div&gt;</strong> containers for individual team members, allowing flexibility in styling.</li>
-                            <li><strong>&lt;img&gt;</strong> tags for profile pictures with appropriate <code>alt</code> attributes for accessibility.</li>
-                            <li><strong>&lt;h3&gt;</strong> and <strong>&lt;p&gt;</strong> tags to present names, roles, and descriptions.</li>
-                        </ul>
-                    </p>
-                    <p>
-                        CSS techniques used:
-                        <ul>
-                            <li><strong>Flexbox/Grid:</strong> Ensures a responsive and well-aligned team member section.</li>
-                            <li><strong>Hover Effects:</strong> Provides smooth transitions when interacting with profile thumbnails.</li>
-                            <li><strong>Animations:</strong> Fade-in and scaling effects enhance user engagement.</li>
-                            <li><strong>Media Queries:</strong> Adjust layout for mobile, tablet, and desktop views.</li>
-                        </ul>
-                    </p>
+                    
+                    <h4>Key HTML Tags:</h4>
+                    <ol>
+                        <li><strong>&lt;nav&gt;</strong></li>
+                            <ul>
+                                <li>Used to define the navigation bar, containing links to different sections of the website (e.g., Home, Volunteer, Data, etc.). The navigation bar ensures users can easily navigate through the site.</li>
+                                <li><strong>&lt;img&gt;</strong> inside <strong>&lt;nav&gt;</strong> provides a logo to represent the website, helping with branding.</li>
+                            </ul>
+                        <br>
+                        <li><strong>&lt;section&gt;</strong></li>
+                            <ul>
+                                <li>The <strong>&lt;section class="team-container"&gt;</strong> wraps the entire content of the team page. It groups related content for better semantics, improving readability and maintainability.</li>
+                            </ul>
+                        <br>
+                        <li><strong>&lt;div class="team-grid"&gt;</strong></li>
+                            <ul>
+                                <li>A grid container that holds all the team members' cards. It provides a flexible layout for organizing team member information.</li>
+                            </ul>
+                        <br>
+                        <li><strong>&lt;div class="team-member"&gt;</strong></li>
+                            <ul>
+                                <li>This represents each individual team member's card. Inside it, there are images and detailed information (name, role, tasks) about the member. The tabindex="0" allows the cards to be focusable for accessibility (keyboard navigation).</li>
+                            </ul>
+                        <br>
+                        <li><strong>&lt;h3&gt; and &lt;p&gt;</strong></li>
+                            <ul>
+                                <li><strong>&lt;h3&gt;</strong> tags are used for team member names, providing a clear hierarchy of content.</li>
+                                <li><strong>&lt;p&gt;</strong> tags present additional information like the role and tasks of each member.</li>
+                            </ul>
+                        <br>
+                        <li><strong>&lt;footer&gt;</strong></li>
+                            <ul>
+                                <li>Contains footer columns with quick links, editor information, and validations, offering easy access to other important sections of the website.</li>
+                            </ul>
+                        <br>
+                        <li><strong>&lt;a&gt;</strong></li>
+                            <ul>
+                                <li>Links used for navigation throughout the page and the footer. The links are styled to match the theme of the page and provide users with clear call-to-actions (CTA).</li>
+                            </ul>
+                    </ol>
+                
+                    <h4>Key CSS Properties:</h4>
+                    <ol>
+                        <li><strong>Colors:</strong></li>
+                            <ul>
+                                <li>The main colors used are green for primary buttons, light green for secondary elements, and white for backgrounds. These colors make the page look fresh and clean.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Fonts:</strong></li>
+                            <ul>
+                                <li>The page uses a modern font called 'Inter' for a professional and readable look.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Team Grid:</strong></li>
+                            <ul>
+                                <li>The team members are arranged in a 2-column grid. It adjusts to a single column on small screens (like phones).</li>
+                                <li>The grid helps make the page look organized and neat.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Team Member Cards:</strong></li>
+                            <ul>
+                                <li>Each team member is in a card with a border, rounded corners, and a shadow to make it stand out.</li>
+                                <li>When you hover over the card, it gets slightly bigger and the shadow becomes more intense. This makes it feel interactive.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Team Member Images:</strong></li>
+                            <ul>
+                                <li>The photos of the team members are circles with a border around them. On hover, the images get a bit bigger to grab attention.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Details Display:</strong></li>
+                            <ul>
+                                <li>When you hover over a team member card, more details (like their tasks) appear. This keeps the page clean and only shows more info when needed.</li>
+                            </ul>
+                    </ol>
 
                     <h3>Accessibility</h3>
-                    <p>
-                        The Team Page follows accessibility best practices, ensuring an inclusive experience for all users. Key enhancements include:
+                    <p> The Team Page is designed with accessibility in mind to ensure a smooth and inclusive experience for all users, including those with disabilities. The following accessibility features are implemented:</p> 
+                    <ol>
+                        <li><strong>Keyboard Navigation & Focus Management</strong></li>
+                            <ul>
+                                <li>Tab Navigation:</li>
+                                    <ul>
+                                        <li>All interactive elements (like team member cards and navigation links) are keyboard-accessible.</li>
+                                        <li>tabindex="0" is applied to team member cards, making them focusable for users navigating via keyboard.</li>
+                                    </ul>
+
+                                <li>Skip Links:</li>
+                                    <ul>
+                                        <li>A "Skip to Main Content" link helps users jump past the menu to the main page.</li>
+                                    </ul>
+                                
+                                <li>Highlighting Selected Items:</li>
+                                    <ul>
+                                        <li>When you use the keyboard to navigate, the selected item is clearly highlighted</li>
+                                    </ul>
+                            </ul><br>
+
+                        <li><strong>Screen Reader Compatibility</strong></li>
                         <ul>
-                            <li><strong>Keyboard Navigation:</strong> All interactive elements are accessible using the keyboard.</li>
-                            <li><strong>ARIA Roles & Labels:</strong> Applied where necessary to improve screen reader support.</li>
-                            <li><strong>Color Contrast:</strong> Ensures text readability for users with visual impairments.</li>
-                            <li><strong>Alternative Text:</strong> All images have descriptive <code>alt</code> attributes.</li>
-                            <li><strong>Focusable Elements:</strong> Maintains logical tab order for improved usability.</li>
-                        </ul>
-                    </p>
+                            <li>Good Page Structure:</li>
+                                <ul>
+                                    <li>The page uses proper headings <strong>(&lt;h3&gt;, &lt;p&gt;)</strong> and sections <strong>(&lt;nav&gt;, &lt;footer&gt;)</strong> so screen readers can read it correctly.</li>
+                                </ul>
+
+                            <li>Image Descriptions (Alt Text):</li>
+                                <ul>
+                                    <li>All images have descriptions so visually impaired users know what they are.</li>
+                                </ul>
+                        </ul><br>
+
+                        <li><strong>Contrast & Readability;</strong></li>
+                            <ul>
+                                <li>High Contrast Colors:</li>
+                                    <ul>
+                                        <li>Dark text on a light background ensures readability for users with low vision or color blindness.</li>
+                                    </ul>
+
+                                <li>Resizing Text Without Breaking Layout:</li>
+                                    <ul>
+                                        <li>Users can increase text size up to 200% without content overlap or loss.</li> 
+                                    </ul>
+
+                                <li>Legible Fonts & Spacing:</li>
+                                    <ul>
+                                        <li>The ‘Inter’ font is used for clarity.</li>
+                                        <li>Sufficient line height and letter spacing improve readability.</li>
+                                    </ul>
+                            </ul>
+                        <br>
+                    </ol>
+                    
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
                         <p><a href="validation_ST0.html#volunteerVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
