@@ -47,7 +47,7 @@
     padding: 20px;
 }
 
-.content-wrapper p {
+.content-wrapper p,li {
     color: var(--text-color);
     font-size: 16px;
     line-height: 1.6;
@@ -110,7 +110,8 @@ h3 {
 }
 
 h4 {
-    color: var(--secondary-color);
+    color:rgb(9, 87, 22);
+    font-size: 17px;
 }
 
 .content-img {
