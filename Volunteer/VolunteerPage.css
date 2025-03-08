@@ -1,8 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Poppins, Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    font-weight: 400;
 }
 
 header {
@@ -149,7 +150,7 @@ color: #777;
 }
 
 .feedback-form {
-margin-top: 5rem;
+margin-top: 3rem;
 background: white;
 padding: 1.5rem;
 border-radius: 8px;
@@ -227,4 +228,62 @@ color: white;
 
 .program-card .program-table {
 margin-top: 1rem;
+}
+
+/* add awards section */
+.panel {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    
+}
+
+/* Container for awards */
+.awards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual Award Box */
+.award {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 150px;
+    text-decoration: none;
+    color: #333;
+}
+
+.award:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Award Images */
+.awards-logo {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.award:hover .awards-logo {
+    transform: scale(1.05);
+}
+
+/* Award Text */
+.award-text {
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 16px;
 }
