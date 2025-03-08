@@ -10,12 +10,12 @@
     --link-color: #1976D2;
 }
 
-#banner {
+/* #banner {
     position: relative;
     text-align: center;
     display: flex;
     align-items: flex-start;
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 20px;
 }
@@ -25,7 +25,42 @@
     max-height: 500px;
     object-fit: cover;
     filter: brightness(70%);
+} */
+
+#banner {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
 }
+
+.banner-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: transform 0.5s ease-in-out;
+}
+
+#banner:hover .banner-img {
+    transform: scale(1.05);
+}
+
+/* .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+} */
 
 .banner-text {
     position: absolute;
@@ -36,15 +71,32 @@
     font-size: 2.5rem;
     font-weight: bold;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translate(-50%, -60%); }
+    100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Parallax Effect */
+@media (prefers-reduced-motion: no-preference) {
+    #banner {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 /* Layout Wrapper */
 .content-wrapper {
     display: flex;
     align-items: flex-start;
-    width: 83%;
+    width: 80%;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .content-wrapper p,li {
@@ -55,7 +107,7 @@
 
 /* Internal Navigation on the Left */
 .internal-nav {
-    width: 35%;
+    width: 100%;
     position: sticky;
     top: 100px;
     background: rgba(255, 255, 255, 0.9);
@@ -63,7 +115,9 @@
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     height: fit-content;
-    margin-left: -2%;
+    margin-left: -10%;
+    margin-right: 5%;
+    margin-top: 20px;
 }
 
 .internal-nav a {
@@ -94,9 +148,10 @@
 section {
     padding: 40px;
     background: white;
-    margin: 30px auto;
+    margin:20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 h2 {
@@ -173,13 +228,14 @@ h4 {
     color: white;
     padding: 20px;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     opacity: 0; /* Initially hidden */
     visibility: hidden; /* Initially hidden */
     transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for visibility and opacity */
     z-index: 1; /* Ensure the description is on top of the image */
     overflow: hidden;
+    font-weight: bold;
 }
 
 .tip-description p {
@@ -189,7 +245,7 @@ h4 {
 .tip:hover .tip-description {
     opacity: 1;
     visibility: visible;
-}
+  }
 
 /* Resources Section */
 #resources {
