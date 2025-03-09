@@ -5,102 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Editor Student - Nirmal</title>
     <link rel="stylesheet" href="./css/pageEditor_validator.css">
-    <link rel="stylesheet" href="/Style.css">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon-32x32.png">
     
 </head>
 <body>
-   <!------- Full-width Navigation Bar ------->
+
+   <!-- Navigation Bar -->
     <nav>
-        <img src="/src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo">
+        <a href="../Home/home.html">
+            <img src="../src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo">
+        </a>
         <ul id="navbar">          
-            <li><a href="/Home/home.html">Home</a></li>
-            <li><a href="/Volunteer/Volunteer.html">Volunteer</a></li>
-            <li><a href="/Data/Data.html">Data</a></li>
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="/TeamPage/team.html">Team</a></li>
-            <li><a href="/FeedbackPage/feedback.html"">Feedback</a></li>
+            <li><a href="../Home/home.html">Home</a></li>
+            <li><a href="../Volunteer/Volunteer.html">Volunteer</a></li>
+            <li><a href="../Data/Data.html">Data</a></li>
+            <li><a href="../Sitemap/sitemap.html">Sitemap</a></li>
+            <li><a href="../TeamPage/team.html">Team</a></li>
+            <li><a href="../FeedbackPage/feedback.html">Feedback</a></li>
         </ul>
         <div id="nav-icon">
-            <a href="/ProfilePage/profilepage.html"><img src="/src/profile-user(1).png" class="icon" alt=""></a>
+            <a href="../ProfilePage/profilepage.html"><img src="../src/profile-user(2).png" class="icon" alt=""></a>
         </div>     
     </nav>
 
+    <div id="top"></div>
     <section class="stud">
-        <h2>Sandanima, Student - 04</h2>
+        <h2>Sandanima Wahalathanthri - Student 04</h2>
     </section>
 
     <div class="container">
         <!-- Main content area -->
         <main>
-
-            <!-- Update those first three sections for the pages you were responsible to implement -->
-
             <section>
-                <h2 id="splash">Splash Page</h2>
+                <h2 id="profile">User Profile Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
-                    
-                    <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
-                    
-                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#splashVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                    <p>The User Profile Page is built using semantic HTML for clear content organization and external CSS for structured styling. 
+                       The layout follows a grid-based design, ensuring a clean and visually appealing presentation.</p>
+        
+                    <h5>Key HTML Elements Used</h5>
+                    <ul>
+                        <li><strong>&lt;nav&gt;:</strong> Defines the navigation bar with a list of links for easy access.</li>
+                        <li><strong>&lt;section&gt;:</strong> Organizes profile details, skills, goals, and availability into structured segments.</li>
+                        <li><strong>&lt;div class="profile-wrapper"&gt;:</strong> Wraps the profile image and user details for styling and alignment.</li>
+                        <li><strong>&lt;div class="skills-list"&gt;:</strong> Displays skills and progress bars, enhancing visual clarity.</li>
+                        <li><strong>&lt;table class="availability"&gt;:</strong> Structures availability data into a readable table format.</li>
+                        <li><strong>&lt;form class="contact-form"&gt;:</strong> Provides an interactive contact section with input fields.</li>
+                        <li><strong>&lt;footer"&gt;:</strong> Contains quick links and credits for easy navigation.</li>
+                    </ul>
+            
+                    <h5>Key CSS Properties Used</h5>
+                    <ul>
+                        <li><strong>display: grid;</strong> – Structures content using a responsive grid layout.</li>
+                        <li><strong>border-radius: 8px;</strong> – Softens card and button edges for a modern UI.</li>
+                        <li><strong>box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);</strong> – Enhances depth and contrast.</li>
+                        <li><strong>:hover { transform: scale(1.05); }</strong> – Adds interactive hover effects for user engagement.</li>
+                    </ul>
 
-                    <h3>Link to the page</h3>
-                        <p><a href="splash.html">Include a link to the actual page you describe.</a></p>
+                    <h3>Accessibility</h3>
+                        <p>To ensure an inclusive and user-friendly experience, accessibility best practices were followed:</p>
+                        <ul>
+                            <li>Semantic HTML elements improve screen reader navigation.</li>
+                            <li>alt attributes are provided for all images</li>
+                            <li>Text contrast ensures readability, with sufficient color differentiation.</li>
+                        </ul>         
+
+                    <div class="button-container">
+                        <p><a href="../ProfilePage/profilepage.html" class="small-button">User Profile Page</a></p>
+                        <p><a href="../ValidationPage/ValidationPage_ST04.html#profileVal" class="small-button">User Profile Page Validation</a>
+                    </div>
             </section>
 
             <section>
-                <h2 id="volunteer">Volunteer Page</h2>
+                <h2 id="sitemap">Sitemap Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                    <p>The sitemap is implemented using HTML, CSS, and JavaScript. The structure is represented using SVG elements to create an interactive 
+                       visual map of the website's navigation. The implementation ensures responsiveness, hover effects, and clickable nodes that redirect 
+                       users to respective pages.</p>
+        
+                    <h5>Key HTML Elements Used</h5>
+                    <p>The sitemap is placed inside a <div class="sitemap-container"> to ensure proper layout. The main structure is built using SVG elements:
+                    </p>
+                    <ul>
+                        <li><strong>&lt;g&gt;:</strong> Groups elements (node + text) together for interactivity.</li>
+                        <li><strong>&lt;rect&gt;:</strong> Defines the shape of each page node.</li>
+                        <li><strong>&lt;text&gt;:</strong> Centers the text inside the node.</li>
+                        <li><strong>&lt;line&gt;:</strong> Creates connections between nodes.</li>
+                    </ul>
+            
+                    <h5>Key CSS Properties Used</h5>
+                    <ul>
+                        <li><strong>rx:</strong> – Make rounded corners in nodes.</li>
+                        <li><strong>fill:</strong> – Fill the background of the node.</li>
+                        <li><strong>text-anchor: middle</strong> – Center-aligned text.</li>
+                        <li><strong>media queries</strong> – Adapt Text sizes based on screen size.</li>
+                    </ul>
+
+                    <h5>Key JavaScript Properties Used</h5>
+                    <ul>
+                        <li><strong>window.location.href</strong> – Ensures proper path structure for different directories.</li>
+                    </ul>
 
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                        <ul>
+                            <li>Hover effects provide visual feedback.</li>
+                            <li>Clickable areas ensure easy navigation.</li>
+                            <li>Scalability allows adding new pages without breaking the design.</li>
+                        </ul>         
 
-                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#volunteerVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
-
-                        
-                    <h3>Link to the page</h3>
-                        <p><a href="volunteer.html">Include a link to the actual page you describe.</a></p>
+                    <div class="button-container">
+                        <p><a href="../Sitemap/sitemap.html" class="small-button">Sitemap Page</a></p>
+                        <p><a href="../ValidationPage/ValidationPage_ST04.html#sitemapVal" class="small-button">Sitemap Page Validation</a>
+                    </div>
             </section>
 
             <section>
                 <h2 id="content">Content Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                    <p>The Preventive Healthcare page is designed with a clear, structured layout to ensure accessibility, responsiveness, and ease of 
+                       navigation. Built using HTML for content structure and CSS for styling, the page offers a seamless and informative user experience 
+                       on preventive healthcare. The design focuses on providing critical health information, resources, and interactive elements to 
+                       educate users about preventive measures, screenings, and healthy lifestyle choices.</p>
+        
+                    <h5>Key HTML Elements Used</h5>
+                    <ul>
+                        <li><strong>&lt;section&gt;:</strong> Organizes content into sections, providing a clear structure for the page.</li>
+                        <li><strong>&lt;div class="content-grid"&gt;:</strong> Organizes the page content into a flexible grid layout.
+                            Ensures that the page is responsive, adapting well to different screen sizes and devices.</li>
+                        <li><strong>&lt;img&gt;:</strong> Images are used to visually enhance content, such as infographics and health tips.
+                            All images include alt attributes to provide descriptions for visually impaired users.</li>
+                    </ul>
+            
+                    <h5>Key CSS Properties Used</h5>
+                    <ul>
+                        <li><strong>Colors:</strong> – The primary color scheme utilizes shades of blue and green for buttons and headings, with a light background color for readability.</li>
+                        <li><strong>Typography:</strong> – The page uses ‘Arial’ and ‘Roboto’ fonts for clarity and professionalism.
+                            Headings (h2, h3) are larger to establish a content hierarchy, while text size is optimized for readability.</li>
+                        <li><strong>Grid Layout:</strong> – The layout utilizes CSS Grid to arrange the content into structured, easy-to-navigate sections.</li>
+                        <li><strong>Hover Effects:</strong> – Interactive content sections and buttons have subtle hover effects, such as color changes, to provide visual feedback to users.</li>
+                    </ul>
 
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                        <ul>
+                            <li>Focused elements are visibly highlighted when users navigate using the keyboard, helping users track their position on the page</li>
+                            <li>The page structure uses appropriate HTML tags, including headings (h2, h3), article, and nav, for easy navigation by screen readers.
+                                Landmarks such as header, footer, and main ensure clear navigation for assistive technologies.</li>
+                            <li>The fonts used on the page are clear and easy to read.
+                                Proper line spacing and letter spacing are applied to improve readability and make the content more digestible for users with cognitive impairments.</li>
+                        </ul>         
 
-                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#contentVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
-
-                        
-                    <h3>Link to the page</h3>
-                        <p><a href="content.html">Include a link to the actual page you describe.</a></p>
+                    <div class="button-container">
+                        <p><a href="../ContentPage/ContentPage_ST02.html" class="small-button">Content Page</a></p>
+                        <p><a href="../ValidationPage/ValidationPage_ST04.html#content04Val" class="small-button">Content Page Validation</a>
+                    </div>
             </section>
 
             <section>
                 <h2 id="challenge"> Challenges and Lessons Learned</h2>
-                    <p>Detail any challenges encountered during the implementation process and explain how they were resolved. Reflect on the lessons learned from overcoming these challenges.</p> 
+                <ul>
+                    <li>Ensuring that the design, navigation, and functionality remain consistent across the profile page, sitemap, and content page, creating a unified user experience.</li>
+                    <li>Making sure the pages adapt well to different screen sizes (desktop, tablet, mobile) and maintain a clean and usable layout.</li>
+                    <li>Designing user-friendly interfaces for interacting with profile information, such as updating personal details, avatars, or content.</li>
+                </ul>           
             </section>
 
             <section>
                 <h2 id="compliance"> Compliance</h2>
-                    <p>Discuss how the pages you have created are compliant with Janet regulations governing web page publication. This includes demonstrating your understanding and application of these regulations. Be realistic and truthful.</p> 
-
-                    
+                    <p> Creating a Profile Page, Sitemap, and Content Page requires compliance with accessibility guidelines and performance optimization. 
+                        This ensures the pages are inclusive, secure, and user-friendly across devices, providing a smooth experience while 
+                        meeting legal and technical standards.</p>                
             </section>
 
             <section>
                 <h2 id="ref">References</h2>
-                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
-                    <ul class="ref">
-                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
-                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
-                    </ul>
+                <ul class="ref">
+                    <li>iStock (2025) <i>iStock.</i> Available at: <a href="https://www.istockphoto.com/">iStock.com</a></li>
+                    <li>Canva <i>canva.</i> Available at: <a href="https://www.canva.com/">canva.com</a></li>
+                    <li>MDN Web Docs <i>developer.mozilla.</i> Available at: <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance/">developer.mozilla.org</a></li>
+                </ul>
             </section>
 
             <p class="top"><a href="#top">Go top</a></p>
@@ -110,32 +192,12 @@
         <aside>
             <h3>Core pages developed:</h3>
 
-        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
             <ul class="top-level-ul">
-                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
-                <li>Student 1</li>
-                    <ul> 
-                        <li><a href="#splash">Splash page</a></li>
-                        <li><a href="#volunteer">Volunteer page</a></li>
-                        <li><a href="#content">Content page</a></li>
-                    </ul>
-                <li>Student 2</li>
-                    <ul>
-                        <li><a href="#">Home page </a></li>
-                        <li><a href="#">Table page</a></li>
-                        <li><a href="#">Content page</a></li>
-                    </ul>
-                <li>Student 3</li>
-                    <ul>
-                        <li><a href="#">Feedback page</a> </li>
-                        <li><a href="#">Team page</a></li>
-                        <li><a href="#">Content page</a></li>
-                    </ul>
                 <li>Student 4</li>
                     <ul>
-                        <li><a href="#">Profile page </a></li>
-                        <li><a href="#">Sitemap page</a></li>
-                        <li><a href="#">Content page</a></li>
+                        <li><a href="#profile">User Profile page </a></li>
+                        <li><a href="#sitemap">Sitemap page</a></li>
+                        <li><a href="#content">Content page</a></li>
                     </ul>
                 <li><a href="#challenge">Challenges and Lessons Learned</a></li>
                 <li><a href="#compliance">Compliance</a></li>
@@ -144,39 +206,40 @@
         </aside>
     </div>
 
+    <!-- footer section -->
     <div class="footer">
         <div class="footer-column">
-            <img src="/src/Logo_of_the_United_Nations_(B&W).svg.png" alt="UN Logo" class="footer-logo">
+            <img src="../src/Logo_of_the_United_Nations_(B&W).svg.png" alt="UN Logo" class="footer-logo">
         </div>
         <div class="footer-column">
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="#navbar">Home</a></li>
-                <li><a href="/Volunteer/Volunteer.html">Volunteer</a></li>
-                <li><a href="/Data/Data.html">Data</a></li>
-                <li><a href="#">Sitemap</a></li>
-                <li><a href="/ProfilePage/profilepage.html">User Profile</a></li>
-                <li><a href="/FeedbackPage/feedback.html">Feedback</a></li>
-                <li><a href="/TeamPage/team.html">Team</a></li>
+                <li><a href="../Volunteer/Volunteer.html">Volunteer</a></li>
+                <li><a href="../Data/Data.html">Data</a></li>
+                <li><a href="../Sitemap/sitemap.html">Sitemap</a></li>
+                <li><a href="../ProfilePage/profilepage.html">User Profile</a></li>
+                <li><a href="../FeedbackPage/feedback.html">Feedback</a></li>
+                <li><a href="../TeamPage/team.html">Team</a></li>
             </ul>
         </div>
         <div class="footer-column">
             <h3>Our Editors</h3>
             <ul>
-                <li><a href="/EditorsPage/EditorsPage_ST01.html">Janidu Jayasundara</a></li>
-                <li><a href="/EditorsPage/EditorsPage_ST02.html">Nirmal Ranasinghe</a></li>
-                <li><a href="/EditorsPage/EditorsPage_ST03.html">Detuni Amaya</a></li>
-                <li><a href="/EditorsPage/EditorsPage_ST04.html">Sandanima Wahalathanthri</a></li>
+                <li><a href="../EditorsPage/EditorsPage_ST01.html">Janidu Jayasundara</a></li>
+                <li><a href="../EditorsPage/EditorsPage_ST02.html">Nirmal Ranasinghe</a></li>
+                <li><a href="../EditorsPage/EditorsPage_ST03.html">Detuni Amaya</a></li>
+                <li><a href="../EditorsPage/EditorsPage_ST04.html">Sandanima Wahalathanthri</a></li>
             </ul>
         </div>
 
         <div class="footer-column">
             <h3>Validations</h3>
             <ul>
-                <li><a href="/ValidationPage/ValidationPage_ST01.html">Janidu Jayasundara</a></li>
-                <li><a href="/ValidationPage/ValidationPage_ST02.html">Nirmal Ranasinghe</a></li>
-                <li><a href="/ValidationPage/ValidationPage_ST03.html">Detuni Amaya</a></li>
-                <li><a href="/ValidationPage/ValidationPage_ST04.html">Sandanima Wahalathanthri</a></li>
+                <li><a href="../ValidationPage/ValidationPage_ST01.html">Janidu Jayasundara</a></li>
+                <li><a href="../ValidationPage/ValidationPage_ST02.html">Nirmal Ranasinghe</a></li>
+                <li><a href="../ValidationPage/ValidationPage_ST03.html">Detuni Amaya</a></li>
+                <li><a href="../ValidationPage/ValidationPage_ST04.html">Sandanima Wahalathanthri</a></li>
             </ul>
         </div>
 
@@ -194,5 +257,6 @@
     <div class="copyright">
         <p>Copyright © . All Right Reserved. </p>
     </div>
+
 </body>
 </html>
