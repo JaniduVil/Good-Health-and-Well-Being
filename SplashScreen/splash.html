@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Add Poppins font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Rest of head content remains same -->
+   <link rel="stylesheet" href="/SplashScreen/Splash.css">
+</head>
+<body>
+  <!-- Splash Screen Content -->
+  <div class="splash-screen" id="splashScreen">
+    <div class="content-wrapper">
+      <h1>Welcome to CareHive</h1>
+      <div class="mission-box">
+        <p>"Our mission is to empower individuals with knowledge, resources, and motivation to 
+          achieve optimal health and well-being"</p>
+      </div>
+      
+      <div class="team-section">
+        <h3>Team Members</h3>
+        <ul>
+          <li><span>➤</span>Janidu Jayasundara</li>
+          <li><span>➤</span>Nirmal Ranasinghe</li>
+          <li><span>➤</span>Detuni Amaya</li>
+          <li><span>➤</span>Himandi Sandanima</li>
+        </ul>
+      </div>
+      
+      <div class="loader-container">
+        <div class="loader"></div>
+        <!-- <div class="progress-bar"></div> -->
+        <p>Loading Home Page...</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('splashScreen').classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = "/home/home.html";
+      }, 1000);
+    }, 4000); 
+  </script>
+</body>
+</html>
