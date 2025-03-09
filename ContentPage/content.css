@@ -96,6 +96,18 @@ html, body {
     border-radius: 10px; /* adds rounded corners */
 }
 
+.checkup-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.checkup-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
 /* Layout Wrapper */
 .content-wrapper {
     display: flex;
