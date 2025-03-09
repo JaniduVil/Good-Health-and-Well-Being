@@ -47,7 +47,7 @@ document.getElementById("content-1").addEventListener("click", function() {
 });
 
 document.getElementById("content-2").addEventListener("click", function() {
-    window.location.href = "../ContentPage/ContentPage_ST023.html";
+    window.location.href = "../ContentPage/ContentPage_ST02.html";
 });
 
 document.getElementById("content-3").addEventListener("click", function() {
@@ -63,15 +63,15 @@ document.getElementById("editor-1").addEventListener("click", function() {
 });
 
 document.getElementById("editor-2").addEventListener("click", function() {
-    window.location.href = "../EditorsPage/EditorsPage_ST01.html";
+    window.location.href = "../EditorsPage/EditorsPage_ST02.html";
 });
 
 document.getElementById("editor-3").addEventListener("click", function() {
-    window.location.href = "../EditorsPage/EditorsPage_ST01.html";
+    window.location.href = "../EditorsPage/EditorsPage_ST03.html";
 });
 
 document.getElementById("editor-4").addEventListener("click", function() {
-    window.location.href = "../EditorsPage/EditorsPage_ST01.html";
+    window.location.href = "../EditorsPage/EditorsPage_ST04.html";
 });
 
 document.getElementById("validation-1").addEventListener("click", function() {
