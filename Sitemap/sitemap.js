@@ -1,5 +1,5 @@
 document.getElementById("splash-screen").addEventListener("click", function() {
-    window.location.href = "../SplashScreen/SplashScreen.html";
+    window.location.href = "../SplashScreen/Splash.html";
 });
 
 document.getElementById("home").addEventListener("click", function() {
@@ -7,7 +7,7 @@ document.getElementById("home").addEventListener("click", function() {
 });
 
 document.getElementById("volunteer").addEventListener("click", function() {
-    window.location.href = "../Volunteer/VolunteerPage.html";
+    window.location.href = "../Volunteer/Volunteer.html";
 });
 
 document.getElementById("content").addEventListener("click", function() {
