@@ -11,7 +11,7 @@ document.getElementById("volunteer").addEventListener("click", function() {
 });
 
 document.getElementById("content").addEventListener("click", function() {
-    window.location.href = "../Home/home.html#main-container";
+    window.location.href = "../Home/home.html#contents";
 });
 
 document.getElementById("data").addEventListener("click", function() {
@@ -23,7 +23,7 @@ document.getElementById("sitemap").addEventListener("click", function() {
 });
 
 document.getElementById("editors").addEventListener("click", function() {
-    window.location.href = "../Home/home.html";
+    window.location.href = "../Home/home.html#editors";
 });
 
 document.getElementById("team").addEventListener("click", function() {
@@ -35,7 +35,7 @@ document.getElementById("feedback").addEventListener("click", function() {
 });
 
 document.getElementById("validation").addEventListener("click", function() {
-    window.location.href = "../Home/home.html";
+    window.location.href = "../Home/home.html#validations";
 });
 
 document.getElementById("profile").addEventListener("click", function() {
