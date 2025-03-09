@@ -40,6 +40,8 @@
       </select>
     </div>
 
+    <div class="programs-container">
+    <button class="scroll-btn left-btn">&lt;</button>
     <div class="programs">
       <!-- Program 1 -->
       <div class="program-card">
@@ -140,7 +142,11 @@
           <button class="apply">Apply</button>
         </div>
       </div>
+
     </div>
+
+    <button class="scroll-btn right-btn">&gt;</button>
+</div>
 
     
 
@@ -267,5 +273,21 @@
   <p>Copyright © . All Right Reserved. </p>
 </div>
 </div>
+
+// Add this JavaScript at the end of your body
+<script>
+  const programsContainer = document.querySelector('.programs');
+  const scrollStep = 300 + 24; // card width + gap (300px + 1.5rem)
+
+  document.querySelector('.left-btn').addEventListener('click', () => {
+    programsContainer.scrollLeft -= scrollStep;
+  });
+
+  document.querySelector('.right-btn').addEventListener('click', () => {
+    programsContainer.scrollLeft += scrollStep;
+  });
+</script>
+
+
 </body>
 </html>
