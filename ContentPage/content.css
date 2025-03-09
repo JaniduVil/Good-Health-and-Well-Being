@@ -179,7 +179,6 @@ h2 {
 
 h3 {
     color: var(--text-color);
-    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 5px;
 }
 

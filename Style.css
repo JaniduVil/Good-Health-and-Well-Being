@@ -97,7 +97,6 @@ nav ul li a:hover {
 }
 
 .footer-column h3 {
-    border-bottom: 2px solid var(--text-color);
     padding-bottom: 5px;
 }
 
@@ -122,6 +121,8 @@ nav ul li a:hover {
 .footer-logo{
     height:100px ;
     position: relative;
+    padding-left: 70px;
+    padding-top: 80px;
 }
 
 /*----Copiwrite------*/
@@ -136,4 +137,10 @@ nav ul li a:hover {
 
 .copyright p{
     color: #D6FFE9;
+}
+
+.social{
+    width: 30px;
+    height: 30px;
+    padding-left: 30px;
 }
