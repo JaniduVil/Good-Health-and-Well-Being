@@ -81,12 +81,6 @@
                     
                     <h4>Key HTML Tags:</h4>
                     <ol>
-                        <li><strong>&lt;nav&gt;</strong></li>
-                            <ul>
-                                <li>Used to define the navigation bar, containing links to different sections of the website (e.g., Home, Volunteer, Data, etc.). The navigation bar ensures users can easily navigate through the site.</li>
-                                <li><strong>&lt;img&gt;</strong> inside <strong>&lt;nav&gt;</strong> provides a logo to represent the website, helping with branding.</li>
-                            </ul>
-                        <br>
                         <li><strong>&lt;section&gt;</strong></li>
                             <ul>
                                 <li>The <strong>&lt;section class="team-container"&gt;</strong> wraps the entire content of the team page. It groups related content for better semantics, improving readability and maintainability.</li>
@@ -106,11 +100,6 @@
                             <ul>
                                 <li><strong>&lt;h3&gt;</strong> tags are used for team member names, providing a clear hierarchy of content.</li>
                                 <li><strong>&lt;p&gt;</strong> tags present additional information like the role and tasks of each member.</li>
-                            </ul>
-                        <br>
-                        <li><strong>&lt;footer&gt;</strong></li>
-                            <ul>
-                                <li>Contains footer columns with quick links, editor information, and validations, offering easy access to other important sections of the website.</li>
                             </ul>
                         <br>
                         <li><strong>&lt;a&gt;</strong></li>
@@ -219,10 +208,117 @@
             <section>
                 <h2 id="content">Content Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                        <p>
+                            The Content Page is designed with a structured layout, ensuring clear information presentation, accessibility, and a responsive design. The page utilizes HTML for content organization and CSS for styling, creating a visually appealing and user-friendly experience.
+                        </p>
 
+                        <h4>Key HTML Tags:</h4>
+
+                        <ol>
+                            <li><strong>&lt;section&gt; (Main Content Wrapper)</strong></li>
+                            <ul>
+                                <li>The <strong>&lt;section class="content-container"&gt;</strong> acts as the main wrapper for the content page.</li>
+                                <li>Enhances page structure and semantics for better readability and accessibility.</li>
+                            </ul><br>
+
+                            <li><strong>&lt;div class="content-grid"&gt; (Grid Layout for Content Sections)</strong></li>
+                            <ul>
+                                <li>Organizes content into a flexible grid layout, ensuring a structured design.</li>
+                                <li>Adapts to different screen sizes for responsive behavior.</li>
+                            </ul><br>
+
+                            <li><strong>&lt;img&gt; (Images in Content Sections)</strong> </li>
+                            <ul>
+                                <li>Used to enhance the visual appeal of the content.</li>
+                                <li><strong>alt</strong> attributes are provided to improve accessibility for visually impaired users.</li>
+                            </ul>
+                        </ol>
+
+                        <h4>Key CSS Properties:</h4>
+                        <ol>
+                            <li><strong>Colors:</strong></li>
+                            <ul>
+                                <li>The primary color scheme consists of green accents for buttons, light backgrounds for readability, and white space for a clean layout.</li>
+                                <li>Ensures visual clarity and maintains consistency across the website.</li>
+                            </ul><br>
+
+                            <li><strong>Typography:</strong></li>
+                            <ul>
+                                <li>The page uses <strong>‘Inter’</strong> as the main font for a modern and professional look.</li>
+                                <li>Headings <strong>(h2, h3) </strong>have larger font sizes to create a clear content hierarchy.</li>
+                                <li>Line height and letter spacing are optimized for readability.</li>
+                            </ul><br>
+
+                            <li><strong>Grid Layout:</strong></li>
+                            <ul>
+                                <li>Uses CSS Grid to arrange content sections in a structured format.</li>
+                                <li>The grid layout adapts to a single-column view on smaller screens for better mobile compatibility.</li>
+                            </ul><br>
+
+                            <li><strong>Interactive Elements:</strong></li>
+                            <ul>
+                                <li><strong>Hover Effects:</strong> When hovering over content blocks, a subtle shadow effect appears, making the sections stand out.</li>
+                                <li><strong>Button Styling:</strong> have rounded edges and color changes on hover, making them visually appealing and interactive</li>
+                            </ul><br>
+
+                            <li><strong>Content Images:</strong></li>
+                            <ul>
+                                <li><strong>Circular Borders:</strong> Images within articles are styled with rounded borders for a sleek look.</li>
+                                <li><strong>Hover Zoom Effect:</strong> slight enlargement on hover to grab attention.</li>
+                            </ul>
+                        </ol>
+ 
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                        <p>
+                            Explain how you used to addressed accessibility in this particular page you implemented.
+                        </p>
+
+                        <ol>
+                            <li><strong>Keyboard Navigation & Focus Management</strong></li>
+                            <ul>
+                                <li>Tab Navigation:</li>
+                                <ul>
+                                    <li>All interactive elements, including links and buttons, are keyboard-accessible.</li>
+                                    <li>tabindex="0" is applied to key content blocks, allowing users to focus on them using the keyboard.</li>
+                                </ul><br>
+
+                                <li>Highlighting Focused Elements:</li>
+                                <ul>
+                                    <li>When using the keyboard to navigate, focused elements are visibly highlighted, ensuring users can track their position.</li>
+                                </ul>
+                            </ul><br>
+
+                            <li><strong>Screen Reader Compatibility</strong></li>
+                            <ul>
+                                <li>Proper Page Structure:</li>
+                                <ul>
+                                    <li>Uses appropriate headings (h2, h3), sections (&lt;article&gt;), and landmarks (&lt;nav&gt;, &lt;footer&gt;) for screen reader compatibility.</li>
+                                </ul><br>
+
+                                <li>Image Descriptions (alt Text):</li>
+                                <ul>
+                                    <li>All images include descriptive alt text, enabling visually impaired users to understand the content</li>
+                                </ul>
+                            </ul><br>
+
+                            <li><strong>Contrast & Readability</strong></li>
+                            <ul>
+                                <li>High Contrast Colors:</li>
+                                <ul>
+                                    <li>Text contrasts well against the background, making it readable for users with low vision or color blindness.</li>
+                                </ul><br>
+
+                                <li>Text Resizing Without Layout Breakage:</li>
+                                <ul>
+                                    <li>Users can increase text size up to 200% without causing content overflow or layout distortion.</li>
+                                </ul><br>
+
+                                <li>Legible Fonts & Spacing:</li>
+                                <ul>
+                                    <li>Sufficient line spacing and letter spacing enhance readability.</li>
+                                </ul>
+                            </ul>
+                        </ol>
 
                     <div class="button-container">
                         <p><a href="/ContentPage/ContentPage_ST03.html" target="_blank" class="small-button">View Content Page</a></p>
