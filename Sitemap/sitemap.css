@@ -26,8 +26,6 @@ body {
 /* Styling for Nodes */
 .node {
     fill: #C8F7C5;
-    /* stroke: #4CAF50;
-    stroke-width: 1.5; */
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
     rx: 10;
     ry: 10;
