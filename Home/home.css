@@ -98,6 +98,23 @@ html, body {
     padding: 40px 10%;
 }
 
+.mission-container{
+    background-color: #D6FFE9;
+    padding: 40px 10%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission{
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.mission-description{
+    text-align: center;
+    color: var(--text-color);
+}
+
 /* Cards Section */
 .cards-container {
     background-color: #f2fff8;
