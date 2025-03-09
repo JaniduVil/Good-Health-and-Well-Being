@@ -14,6 +14,9 @@
   <!-- <header>
     <h1>Volunteer Programs</h1>
   </header> -->
+
+
+  <!-- navigation -->
   <nav>
     <a href="/Home/home.html"><img src="/src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo"></a>
     <ul id="navbar">          
@@ -29,6 +32,7 @@
     </div>     
 </nav>
 
+<!-- volunteer_body -->
 <div class="volunteer_body">
   <div class="container">
     <div class="filter">
@@ -40,6 +44,7 @@
       </select>
     </div>
 
+    <!--volunteer programs -->
     <div class="programs-container">
     <button class="scroll-btn left-btn">&lt;</button>
     <div class="programs">
@@ -182,6 +187,8 @@
         </div>
       </div>
 
+
+      <!-- awards section -->
       <body>
         <div class="panel">
             <div class="awards-container">
@@ -212,6 +219,8 @@
             </div>
         </div>
 
+
+      <!-- feedback form -->
       <div class="feedback-form">
         <h2>Send us your review</h2>
         <textarea placeholder="Write your review here..."></textarea>
@@ -230,6 +239,7 @@
   </div>
 </div>
 
+<!-- footer -->
 <div class="footer">
   <div class="footer-column">
       <img src="/src/Logo_of_the_United_Nations_(B&W).svg.png" alt="UN Logo" class="footer-logo">
@@ -274,19 +284,19 @@
 </div>
 </div>
 
-<script>
-  const programsContainer = document.querySelector('.programs');
-  const scrollStep = 300 + 24;
+<!-- script for scrolling -->
+  <script>
+    const programsContainer = document.querySelector('.programs');
+    const scrollStep = 300 + 24;
 
-  document.querySelector('.left-btn').addEventListener('click', () => {
-    programsContainer.scrollLeft -= scrollStep;
-  });
+    document.querySelector('.left-btn').addEventListener('click', () => {
+      programsContainer.scrollLeft -= scrollStep;
+    });
 
-  document.querySelector('.right-btn').addEventListener('click', () => {
-    programsContainer.scrollLeft += scrollStep;
-  });
-</script>
+    document.querySelector('.right-btn').addEventListener('click', () => {
+      programsContainer.scrollLeft += scrollStep;
+    });
+  </script>
 
-
-</body>
+  </body>
 </html>
