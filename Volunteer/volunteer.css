@@ -42,20 +42,6 @@ header {
     scrollbar-width: none;  
 }
 
-.programs::-webkit-scrollbar {
-    display: none;  
-}
-
-.programs::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 4px;
-}
-
-.programs::-webkit-scrollbar-thumb {
-    background: #007BFF;
-    border-radius: 4px;
-}
-
 .program-card {
     flex: 0 0 385px; 
     background: white;
