@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!------- Full-width Navigation Bar -------> 
+    <!-- Full-width Navigation Bar --> 
     <nav>
         <a href="/Home/home.html">
             <img src="/src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo">
@@ -132,21 +132,8 @@
                     <option value="advertisement">Advertisement</option>
                     <option value="other">Other</option>
                 </select>
-
-                <!-- Multi-Select Scrolling List -->
-                <!-- <label for="interests">What type of health-related content would you like to see more of on our website? (Select multiple)</label>
-                <select id="interests" name="interests" multiple>
-                    <option value="health">Fitness tips and exercises</option>
-                    <option value="education">Mental health resources</option>
-                    <option value="environment">Healthy recipes and meal planning</option>
-                    <option value="technology">Information on medical conditions</option>
-                    <option value="lifestyle">Wellness programs and challenges</option>
-                    <option value="other">Community health initiatives</option>
-                    <option value="other">Health news and updates</option>
-                    <option value="other">Self-care advice</option>
-                </select> -->
                 
-                <label for="rating">Rate Us:</label>
+                <label>Rate Us:</label>
                 <div class="rating">
                     <span data-rating="1">😡</span>
                     <span data-rating="2">☹️</span>
@@ -154,6 +141,8 @@
                     <span data-rating="4">😊</span>
                     <span data-rating="5">😍</span>
                 </div>
+                <!-- Add a hidden input to store the selected rating -->
+                <!-- <input type="hidden" id="rating" name="rating" value=""> -->
 
                 <label>Are you satisfied with our service?</label>
                 <div class="radio-group">
@@ -294,7 +283,8 @@
 
                 // Optional: Store the selected rating value (e.g., for form submission)
                 const selectedRating = this.getAttribute('data-rating');
-                console.log('Selected Rating:', selectedRating);
+                // console.log('Selected Rating:', selectedRating);
+                document.getElementById('rating').value = selectedRating;
             });
         });
 
