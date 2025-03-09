@@ -30,7 +30,7 @@ document.getElementById("team").addEventListener("click", function() {
     window.location.href = "../TeamPage/team.html";
 });
 
-document.getElementById("feedbak").addEventListener("click", function() {
+document.getElementById("feedback").addEventListener("click", function() {
     window.location.href = "../FeedbackPage/feedback.html";
 });
 
