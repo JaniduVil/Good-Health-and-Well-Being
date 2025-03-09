@@ -238,3 +238,11 @@ input[type="checkbox"], input[type="radio"] {
 input[type="file"] {
     padding: 5px;
 }
+
+/* Style for selected options in the multi-select list */
+option:checked {
+    background-color: #e0f7fa; /* Light blue background for selected items */
+    font-weight: bold; /* Bold text for selected items */
+    position: relative;
+}
+
