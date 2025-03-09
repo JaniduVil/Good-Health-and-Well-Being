@@ -14,6 +14,9 @@
   <!-- <header>
     <h1>Volunteer Programs</h1>
   </header> -->
+
+
+  <!-- navigation -->
   <nav>
     <a href="/Home/home.html"><img src="/src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo"></a>
     <ul id="navbar">          
@@ -25,10 +28,11 @@
         <li><a href="/FeedbackPage/feedback.html">Feedback</a></li>
     </ul>
     <div id="nav-icon">
-      <a href="/ProfilePage/profilepage.html"><img src="/src/profile-user(1).png" class="icon" alt=""></a>
+      <a href="/ProfilePage/profilepage.html"><img src="/src/profile-user(2).png" class="icon" alt="profile-image"></a>
     </div>     
 </nav>
 
+<!-- volunteer_body -->
 <div class="volunteer_body">
   <div class="container">
     <div class="filter">
@@ -40,6 +44,7 @@
       </select>
     </div>
 
+    <!--volunteer programs -->
     <div class="programs-container">
     <button class="scroll-btn left-btn">&lt;</button>
     <div class="programs">
@@ -182,6 +187,8 @@
         </div>
       </div>
 
+
+      <!-- awards section -->
       <body>
         <div class="panel">
             <div class="awards-container">
@@ -212,6 +219,8 @@
             </div>
         </div>
 
+
+      <!-- feedback form -->
       <div class="feedback-form">
         <h2>Send us your review</h2>
         <textarea placeholder="Write your review here..."></textarea>
@@ -230,6 +239,7 @@
   </div>
 </div>
 
+<!-- footer -->
 <div class="footer">
   <div class="footer-column">
       <img src="/src/Logo_of_the_United_Nations_(B&W).svg.png" alt="UN Logo" class="footer-logo">
@@ -240,7 +250,7 @@
           <li><a href="#navbar">Home</a></li>
           <li><a href="/Volunteer/VolunteerPage.html">Volunteer</a></li>
           <li><a href="/Data/Data.html">Data</a></li>
-          <li><a href="#">Sitemap</a></li>
+          <li><a href="/Sitemap/sitemap.html">Sitemap</a></li>
           <li><a href="/ProfilePage/profilepage.html">User Profile</a></li>
           <li><a href="/FeedbackPage/feedback.html">Feedback</a></li>
           <li><a href="/TeamPage/team.html">Team</a></li>
@@ -265,6 +275,15 @@
           <li><a href="/ValidationPage/ValidationPage_ST04.html">Sandanima Wahalathanthri</a></li>
       </ul>
   </div>
+
+  <div class="footer-column">
+    <h3>Contact Us</h3>
+    <ul>
+        <li><a href="https://www.linkedin.com/home?originalSubdomain=lk" target="_blank"><img src="/src/linkedin.png" alt="linkedin" class="social"></a></li>
+        <li><a href="https://www.youtube.com/" target="_blank"><img src="/src/youtube.png" alt="youtube" class="social"></a></li>
+        <li><a href="https://www.facebook.com/" target="_blank"><img src="/src/communication.png" alt="facebook" class="social"></a></li>
+    </ul>
+</div>
   
 </div>
 
@@ -274,19 +293,19 @@
 </div>
 </div>
 
-<script>
-  const programsContainer = document.querySelector('.programs');
-  const scrollStep = 300 + 24;
+<!-- script for scrolling -->
+  <script>
+    const programsContainer = document.querySelector('.programs');
+    const scrollStep = 300 + 24;
 
-  document.querySelector('.left-btn').addEventListener('click', () => {
-    programsContainer.scrollLeft -= scrollStep;
-  });
+    document.querySelector('.left-btn').addEventListener('click', () => {
+      programsContainer.scrollLeft -= scrollStep;
+    });
 
-  document.querySelector('.right-btn').addEventListener('click', () => {
-    programsContainer.scrollLeft += scrollStep;
-  });
-</script>
+    document.querySelector('.right-btn').addEventListener('click', () => {
+      programsContainer.scrollLeft += scrollStep;
+    });
+  </script>
 
-
-</body>
+  </body>
 </html>
