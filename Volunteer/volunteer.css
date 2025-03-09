@@ -1,0 +1,355 @@
+body {
+    font-family: Poppins, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2fff8;
+    font-weight: 400;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.filter {
+    margin-bottom: 1.5rem;
+}
+
+.filter select {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.programs {
+    display: inline-flex; 
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth; 
+    width: 100%;
+
+}
+
+
+.programs {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.programs::-webkit-scrollbar {
+    display: none;  
+}
+
+.programs::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.programs::-webkit-scrollbar-thumb {
+    background: #007BFF;
+    border-radius: 4px;
+}
+
+.program-card {
+    flex: 0 0 385px; 
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.programs-container {
+    position: relative;
+    padding: 0 40px;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.scroll-btn:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.left-btn {
+    left: 0;
+    margin-left: -15px;
+
+}
+
+.right-btn {
+    right: 0;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+.program-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.program-details {
+    margin-top: 1rem;
+}
+
+.program-details h3 {
+margin: 0 0 0.5rem;
+}
+
+.program-details p {
+margin: 0.5rem 0;
+font-size: 0.9rem;
+}
+
+.buttons {
+margin-top: 1rem;
+display: flex;
+gap: 0.5rem;
+}
+
+.buttons button {
+flex: 1;
+padding: 0.7rem;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1rem;
+}
+
+.buttons .view {
+background-color: #007BFF;
+color: white;
+}
+
+.buttons .apply {
+background-color: #28A745;
+color: white;
+}
+
+.reviews {
+margin-top: 4rem;
+}
+
+.reviews h2 {
+margin-bottom: 1rem;
+font-size: 1.5rem;
+text-align: center;
+}
+
+.overall-rating {
+text-align: center;
+margin-bottom: 1.5rem;
+}
+
+.overall-rating .rating {
+font-size: 2rem;
+font-weight: bold;
+color: #28A745;
+}
+
+.overall-rating .summary {
+font-size: 1rem;
+color: #555;
+}
+
+.review-list {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 1rem;
+}
+
+.review-card {
+background: white;
+padding: 1rem;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-card h3 {
+margin: 0 0 0.5rem;
+font-size: 1.1rem;
+color: #007BFF;
+}
+
+.review-card p {
+margin: 0.5rem 0;
+font-size: 0.9rem;
+color: #555;
+}
+
+.review-card a {
+color: #007BFF;
+text-decoration: none;
+font-size: 0.9rem;
+}
+
+.review-card a:hover {
+text-decoration: underline;
+}
+
+.review-card .reviewer {
+margin-top: 1rem;
+font-size: 0.8rem;
+color: #777;
+}
+
+.feedback-form {
+margin-top: 3rem;
+background: white;
+padding: 1.5rem;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form textarea {
+width: 100%;
+height: 100px;
+padding: 0.5rem;
+margin-bottom: 1rem;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.feedback-form .emoji-container {
+display: flex;
+justify-content: center;
+gap: 0.5rem;
+margin-bottom: 1rem;
+}
+
+.feedback-form .emoji-container span {
+font-size: 1.5rem;
+cursor: pointer;
+transition: transform 0.2s;
+}
+
+.feedback-form .emoji-container span:hover {
+transform: scale(1.2);
+}
+
+.feedback-form .buttons {
+display: flex;
+justify-content: center;
+gap: 1rem;
+}
+
+.feedback-form .buttons button {
+padding: 0.7rem 1.5rem;
+border: none;
+border-radius: 5px;
+font-size: 1rem;
+cursor: pointer;
+}
+
+.feedback-form .buttons .submit {
+background-color: #007BFF;
+color: white;
+}
+
+.feedback-form .buttons .cancel {
+background-color: #ccc;
+color: black;
+}
+
+
+.program-table {
+margin-top: 1rem;
+border-collapse: collapse;
+width: 100%;
+}
+
+.program-table th, .program-table td {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: center;
+}
+
+.program-table th {
+background-color: #475948;
+color: white;
+}
+
+.program-card .program-table {
+margin-top: 1rem;
+}
+
+/* awards section */
+.panel {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    
+}
+
+/* Container for awards */
+.awards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual Award Box */
+.award {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 150px;
+    text-decoration: none;
+    color: #333;
+}
+
+.award:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Award Images */
+.awards-logo {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.award:hover .awards-logo {
+    transform: scale(1.05);
+}
+
+/* Award Text */
+.award-text {
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+

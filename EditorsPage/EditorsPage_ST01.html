@@ -16,14 +16,14 @@
     <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
 
     <nav>
-        <img src="/src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo">
+        <a href="/Home/home.html"><img src="/src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo"></a>
         <ul id="navbar">          
             <li><a href="/Home/home.html">Home</a></li>
-            <li><a href="/Volunteer/VolunteerPage.html">Volunteer</a></li>
+            <li><a href="/Volunteer/Volunteer.html">Volunteer</a></li>
             <li><a href="/Data/Data.html">Data</a></li>
-            <li><a href="#">Sitemap</a></li>
+            <li><a href="/Sitemap/sitemap.html">Sitemap</a></li>
             <li><a href="/TeamPage/team.html">Team</a></li>
-            <li><a href="/FeedbackPage/feedback.html"">Feedback</a></li>
+            <li><a href="/FeedbackPage/feedback.html">Feedback</a></li>
         </ul>
         <div id="nav-icon">
             <a href="/ProfilePage/profilepage.html"><img src="/src/profile-user(1).png" class="icon" alt=""></a>
@@ -45,16 +45,16 @@
                 <h2 id="splash">Splash Page</h2>
                     <h3>Technical Description</h3>
                         <!-- <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> -->
-                        <p>This splash screen effectively combines HTML, CSS, and JavaScript to create a smooth and visually engaging transition before redirecting to the home page. The HTML structure consists of a <code>&lt;div&gt;</code> container (.splash-screen), which centers the content, including a title, mission statement, team member list, and a loading animation. The CSS styling enhances the user experience with a full-screen background image for immersion, a glassmorphism effect using a semi-transparent background with blur for readability, and text animations (fadeIn) for smooth appearance. </p> 
+                        <p>This splash screen effectively combines HTML, CSS, and JavaScript to create a smooth and visually engaging transition before redirecting to the home page. The HTML structure consists of a <code>&lt;div&gt;</code> container (.splash-screen), which centers the content, including a title, mission statement, team member list, and a loading animation. The CSS styling enhances the user experience with a full-screen background image for immersion, a glassmorphism effect using a semi-transparent background with blur for readability, and text animations for smooth appearance. </p> 
                              
-                        <p>Additionally, a rotating loader (@keyframes spin) visually indicates progress, while a fade-out effect (opacity: 0) ensures a seamless transition before navigation. The JavaScript logic introduces a 4-second delay before redirecting, allowing users enough time to absorb the content. Overall, this design achieves a balance between functionality and aesthetics, delivering a professional and engaging user experience.</p>
+                        <p>Additionally, a rotating loader (@keyframes spin) visually indicates progress, while splash screen ensures a seamless transition before navigation. The JavaScript logic introduces a 4-second delay before redirecting, allowing users enough time to absorb the content. Overall, this design achieves a balance between functionality and aesthetics, delivering a professional and engaging user experience.</p>
                     <h3>Accessibility</h3>
                         <p>This splash screen incorporates several <b>accessibility considerations</b> to ensure a user-friendly experience for all visitors. The <b>HTML structure</b> is designed with clear headings (<code>&lt;h1&gt;</code> for the title and <code>&lt;p&gt;</code> for descriptive text) to provide proper document hierarchy, aiding screen readers in navigating the content effectively. The <b>color contrast</b> between the text and the background ensures readability, with a semi-transparent dark overlay improving visibility against the bright background image. </p>
                             
-                        <p>The <b>animations and transitions</b> are designed to be subtle and not overwhelming, reducing potential discomfort for users with motion sensitivity. Additionally, the <b>loading indicator</b> visually communicates progress, offering users clear feedback. The <b>JavaScript-based redirection</b> includes a <b>4-second delay</b>, allowing users enough time to process the content before navigating away. These accessibility-focused design choices help enhance usability for a diverse audience, including individuals with visual impairments or cognitive challenges.</p>
+                        <p>The <b>animations and transitions</b> are designed to be subtle and not overwhelming, reducing potential discomfort for users with motion sensitivity. Additionally, the <b>loading indicator</b> visually communicates progress, offering users clear feedback. The <b>redirection</b> includes a <b>4-second delay</b>, allowing users enough time to process the content before navigating away. These accessibility-focused design choices help enhance usability for a diverse audience, including individuals with visual impairments or cognitive challenges.</p>
                     
                         <div class="button-container">
-                            <p><a href="/SplashScreen/SplashScreen.html" class="small-button">Splash Screen Page</a></p>
+                            <p><a href="/SplashScreen/Splash.html" class="small-button">Splash Screen Page</a></p>
                             <p><a href="/ValidationPage/ValidationPage_ST01.html#feedbackVal" class="small-button">Splash Page Validation</a>
                         </div>
             </section>
@@ -62,7 +62,7 @@
             <section>
                 <h2 id="volunteer">Volunteer Page</h2>
                     <h3>Technical Description</h3>
-                        <p>The Volunteer Programs Page is structured using semantic HTML to ensure readability, organization, and accessibility.The volunteer programs are displayed using a grid layout (display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));), ensuring a responsive design that adapts to different screen sizes. The program-card component encapsulates each program, combining an <code>&lt;img&gt;</code> tag for visual representation, a <code>&lt;h3&gt;</code> tag for the title, and a <code>&lt;p&gt;</code> tag for descriptions. The program-table is designed with the <code>&lt;table&gt;</code> element to neatly present program duration, fees, and costs.</p>
+                        <p>The Volunteer Programs Page is structured using semantic HTML to ensure readability, organization, and accessibility.The volunteer programs are displayed using a grid layout,and it ensuring a responsive design that adapts to different screen sizes. The program-card component encapsulates each program, combining an <code>&lt;img&gt;</code> tag for visual representation, a <code>&lt;h3&gt;</code> tag for the title, and a <code>&lt;p&gt;</code> tag for descriptions. The program-table is designed with the <code>&lt;table&gt;</code> element to neatly present program duration, fees, and costs.</p>
                         
                         <p>CSS techniques include flexbox (display: flex;) for buttons and navigation elements, ensuring alignment and equal distribution of space. Box shadows and border-radius enhance the card design, making it visually appealing while maintaining a clean layout. The use of color contrast (background-color: #007BFF; color: white;) improves readability, particularly in the navigation and call-to-action buttons.</p>
                     <h3>Accessibility</h3>
@@ -72,7 +72,7 @@
 
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
                     <div class="button-container">
-                        <p><a href="/Volunteer/VolunteerPage.html" class="small-button">Volunteer Page</a></p>
+                        <p><a href="/Volunteer/Volunteer.html" class="small-button">Volunteer Page</a></p>
                         <p><a href="/ValidationPage/ValidationPage_ST01.html#volunteerVal" class="small-button">Volunteer Page Validation</a>
                     </div>
             </section>
@@ -113,7 +113,7 @@
             <section>
                 <h2 id="compliance"> Compliance</h2>
                 <p>
-                    In the development of both the <strong>Splash Screen</strong> and the <strong>Volunteer Programs Page</strong>, compliance with Janet regulations governing web page publication was a priority. Janet, being a network for research and education, sets specific guidelines to ensure that web content is accessible, secure, and respects user privacy. One of the primary considerations was adhering to accessibility standards such as WCAG (Web Content Accessibility Guidelines). For both pages, semantic HTML was used, ensuring proper use of <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;footer&gt;</code> tags for better structure and accessibility.
+                    In the development of <strong>Splash Screen</strong>, <strong>Volunteer Programs Page</strong> and the <strong>content page</strong>, compliance with Janet regulations governing web page publication was a priority. Janet, being a network for research and education, sets specific guidelines to ensure that web content is accessible, secure, and respects user privacy. One of the primary considerations was adhering to accessibility standards such as WCAG (Web Content Accessibility Guidelines). For all pages, semantic HTML was used, ensuring proper use of <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;footer&gt;</code> tags for better structure and accessibility.
                   </p>
                   
                   <p>
@@ -134,8 +134,13 @@
                 <h2 id="ref">References</h2>
                 <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
                     <ul class="ref">
-                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
-                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
+                        <!-- <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li> -->
+                        <li>International Volunteer HQ. (n.d.). International Volunteer HQ | IVHQ | Most Trusted & Affordable. [online] Available at: <a href="https://www.volunteerhq.org/">https://www.volunteerhq.org/</a>.</li>
+                        <li>United Nations (2024). United Nations. [online] Un.org. Available at: <a href="https://www.un.org/en/">https://www.un.org/en/.</a></li>
+                        <li>Cherry, K. (2020). What is Meditation? [online] Verywell Mind. Available at: <a href="https://www.verywellmind.com/what-is-meditation-2795927">https://www.verywellmind.com/what-is-meditation-2795927</a></li>
+                        <li>Thetreetop.com. (2024). Statistics on How Many Friends You Need. [online] Available at: <a href="https://www.thetreetop.com/statistics/how-many-friends-you-need-statistics">https://www.thetreetop.com/statistics/how-many-friends-you-need-statistics</a></li>
+                        <li>jim (2022). Sober Living America. [online] Sober Living America. Available at: <a href="https://soberlivingamerica.org/helpful-tips-for-sober-socializing/">https://soberlivingamerica.org/helpful-tips-for-sober-socializing/</a></li>
+                        <li>United Nations (2015). The 17 Sustainable Development Goals. [online] United Nations. Available at: <a href="https://sdgs.un.org/goals"></a>https://sdgs.un.org/goals</li>
                     </ul>
             </section>
 
@@ -172,9 +177,9 @@
         <h3>Quick Links</h3>
         <ul>
             <li><a href="#navbar">Home</a></li>
-            <li><a href="/Volunteer/VolunteerPage.html">Volunteer</a></li>
+            <li><a href="/Volunteer/volunteer.html">Volunteer</a></li>
             <li><a href="/Data/Data.html">Data</a></li>
-            <li><a href="#">Sitemap</a></li>
+            <li><a href="/Sitemap/sitemap.html">Sitemap</a></li>
             <li><a href="/ProfilePage/profilepage.html">User Profile</a></li>
             <li><a href="/FeedbackPage/feedback.html">Feedback</a></li>
             <li><a href="/TeamPage/team.html">Team</a></li>
