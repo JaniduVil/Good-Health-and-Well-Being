@@ -83,3 +83,28 @@ img {
         margin-bottom: 20px;
     }
 }
+
+.small-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white; 
+    text-decoration: none;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+    margin: 5px;
+    border: 1px solid var(--border-color); 
+}
+
+.small-button:hover {
+    background-color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Aligns buttons vertically */
+    justify-content: center; /* Centers buttons horizontally */
+}
