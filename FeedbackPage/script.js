@@ -8,11 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Existing character counter script
-document.getElementById("message").addEventListener("input", function () {
-    let remaining = 200 - this.value.length;
-    document.getElementById("message-counter").innerText = `${remaining} characters remaining`;
-});
 
 document.getElementById("feedback-form").addEventListener("submit", function(event) {
     // Prevent default form submission (page reload)
