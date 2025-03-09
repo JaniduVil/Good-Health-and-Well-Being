@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="css/pageEditor_validator.css"> 
     <link rel="stylesheet" href="/home/home.css"> 
     <link rel="stylesheet" href="css/view_pages.css"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon-32x32.png">
 </head>
 
 <body>
-   <!------- Full-width Navigation Bar ------->
+    <!-- Full width Navigation Bar -->
     <nav>
         <a href="../Home/home.html">
             <img src="../src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo">
-        </a>
+        </a> 
         <ul id="navbar">          
             <li><a href="../Home/home.html">Home</a></li>
             <li><a href="../Volunteer/Volunteer.html">Volunteer</a></li>
@@ -26,10 +27,12 @@
             <li><a href="../TeamPage/team.html">Team</a></li>
             <li><a href="../FeedbackPage/feedback.html">Feedback</a></li>
         </ul>
+        
         <div id="nav-icon">
             <a href="../ProfilePage/profilepage.html"><img src="../src/profile-user(2).png" class="icon" alt=""></a>
         </div>     
     </nav>
+
 
     <section class="stud">
         <h2>Detuni Amaya - Student 03</h2>
@@ -39,34 +42,128 @@
         <!-- Main content area -->
         <main>
 
-            <!-- Update those first three sections for the pages you were responsible to implement -->
-
             <section>
                 <h2 id="feedback">Feedback Page</h2>
                     <h3>Technical Description</h3>
                     <p>
-                        The Feedback Page is made using HTML, CSS, and JavaScript to create a simple and easy-to-use form where users can give their feedback. The form includes text boxes, email fields, dropdowns, radio buttons, checkboxes, and a rating system to collect different types of feedback.
-                    </p>
-                    <p>
-                        CSS helps make the page neat, well-spaced, and responsive, so it works well on different screen sizes. JavaScript checks the inputs and shows error messages if something is missing or incorrect. The submit button ensures that users complete the form properly before sending it.
-                    </p>
-                    <p>
-                        After submitting the form successfully, a message appears to confirm submission, making the process clear for users. Smooth animations and transitions make the page look modern and user-friendly.
+                        The Feedback Page is designed using HTML, CSS, and JavaScript to create a user-friendly form for collecting feedback. The form includes various input types such as text fields, email fields, dropdowns, radio buttons, checkboxes, and a rating system to gather comprehensive feedback from users.
                     </p>
 
+                    <h4>Key HTML Tags:</h4>
+                    <ol>
+                        <li><strong>Form Tag (&lt;form&gt;)</strong></li>
+                            <ul>
+                                <li>The <strong>&lt;form&gt;:</strong> tag is used to create the feedback form. It acts as a container for all the input fields and buttons.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Input Fields (&lt;input&gt;, &lt;textarea&gt;):</strong></li>
+                            <ul>
+                                <li><strong>&lt;input&gt;:</strong> Used for single-line inputs like name and email. The type attribute specifies the kind of input (e.g., text, email)</li>
+                                <li><strong>&lt;textarea&gt;:</strong> Used for multi-line inputs like feedback messages. It allows users to write longer responses.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Labels (&lt;label&gt;):</strong></li>
+                            <ul>
+                                <li>Each input field has a <strong>&lt;label&gt;</strong> tag to describe its purpose. The <strong>for</strong> attribute connects the label to the input field’s <strong>id</strong>.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Buttons (&lt;button&gt;):</strong></li>
+                            <ul>
+                                <li>The <strong>&lt;button&gt;</strong> tag is used for actions like submitting the form. The <strong>type="submit"</strong> attribute sends the form data.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Divisions (&lt;div&gt;):</strong></li>
+                            <ul>
+                                <li>The <strong>&lt;div&gt;</strong> tag groups related elements together, making it easier to style and organize the form.</li>
+                            </ul>
+                    </ol>
+
+                    <h4>Key CSS Properties:</h4>
+                    <ol>
+                        <li><strong>Form Layout:</strong></li>
+                            <ul>
+                                <li>Used <strong>display: flex</strong> or <strong>display: grid</strong>  to arrange the form elements neatly. For example, stack input fields vertically and center the form on the page.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Styling Input Fields:</strong></li>
+                            <ul>
+                                <li>Input fields are styled with padding, border, and border-radius to create a clean and modern look. The width: 100% ensures they fill the container.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Hover and Focus States:</strong></li>
+                            <ul>
+                                <li>Add effects when users hover over or click on an input field. For example, change the border color when the field is focused.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Button Styling:</strong></li>
+                            <ul>
+                                <li>Style the submit button to match the theme of the page. Add hover effects to make it interactive.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Responsive Design:</strong></li>
+                            <ul>
+                                <li>Use media queries to adjust the form layout for smaller screens. For example, reduce the width of input fields on mobile devices.</li>
+                            </ul>
+                    </ol>
+
+                    <h4>JavaScript Functionality:</h4>
+                    <ol>
+                        <li><strong>Form Validation:</strong></li>
+                            <ul>
+                                <li>Added JavaScript to validate the form before submission. For example, checked if the email field contains a valid email address and if the feedback message is not empty.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Displaying Success Message:</strong></li>
+                            <ul>
+                                <li>After the form is submitted successfully, used JavaScript to display a success message to the user.</li>
+                            </ul>
+                        <br>
+                        <li><strong>Rating Emoji Selection:</strong></li>
+                            <ul>
+                                <li>Allows users to select a rating by clicking on emojis.</li>
+                                <li>Stores the selected rating value in a hidden input field for form submission.</li>
+                            </ul>
+                    </ol>
+
+                    
                     <h3>Accessibility</h3>
-                    <p>
-                        The Feedback Page follows good accessibility practices so that everyone, including people with disabilities, can use it easily. The form uses proper labels for input fields to help screen readers read the information correctly.
-                    </p>
-                    <ul>
-                        <li><strong>Color Contrast:</strong> High contrast between text and background improves readability.</li>
-                        <li><strong>Keyboard Navigation:</strong> Users can navigate through the form using the keyboard, enhancing accessibility for those with motor impairments.</li>
-                        <li><strong>ARIA Attributes:</strong> Implemented where necessary to improve screen reader interpretation.</li>
-                        <li><strong>Validation Messages:</strong> Clear, descriptive error messages assist users in correcting input errors.</li>
-                    </ul>
-                    <p>
-                        These features make the Feedback Page easy, accessible, and user-friendly for everyone.
-                    </p>
+                    <p>The Feedback Page is designed with accessibility in mind to ensure inclusivity for all users, including those with disabilities.</p> 
+                    <ol>
+                        <li><strong>Keyboard Navigation & Focus Management</strong></li>
+                            <ul>
+                                <li>Labels and Inputs:</li>
+                                    <ul>
+                                        <li>Ensured every input field has <strong>&lt;label&gt;</strong> tag with a <strong>for</strong> attribute. This makes the form more accessible to screen readers and keyboard users.</li>
+                                    </ul>
+
+                                <li>Focus Indicators:</li>
+                                    <ul>
+                                        <li>Added clear outlines or borders to focused elements so keyboard users can easily navigate the form.</li>
+                                    </ul>
+                            </ul><br>
+
+                        <li><strong>Screen Reader Compatibility</strong></li>
+                        <ul>
+                            <li>Semantic HTML:</li>
+                                <ul>
+                                    <li>Used proper tags like <strong>&lt;form&gt;</strong>, <strong>&lt;label&gt;</strong>, and <strong>&lt;button&gt;</strong> to ensure screen readers can understand and navigate the form.</li>
+                                </ul>
+                        </ul><br>
+
+                        <li><strong>Contrast & Readability;</strong></li>
+                            <ul>
+                                <li>High Contrast Colors:</li>
+                                    <ul>
+                                        <li>Dark text on a light background ensures readability for users with low vision or color blindness.</li>
+                                    </ul>
+
+                                <li>Legible Fonts and Spacing:</li>
+                                    <ul>
+                                        <li>chose a clean font ('Inter') and added enough spacing between lines and letters for readability.</li> 
+                                    </ul>
+                            </ul>
+                        <br>
+                    </ol>
 
                     <div class="button-container">
                         <p><a href="/FeedbackPage/feedback.html" target="_blank" class="small-button">View Feedback Page</a></p>
@@ -78,33 +175,33 @@
                 <h2 id="team">Team Page</h2>
                     <h3>Technical Description</h3>
                     <p>
-                        The HTML and CSS techniques used in the Team Page focus on a clean, user-friendly design with interactivity and accessibility.
+                        The Team Page is designed using HTML and CSS to showcase team members in a clean and interactive layout. The page features a grid of team member cards, each containing an image, name, role, and additional details.
                     </p>
                     
                     <h4>Key HTML Tags:</h4>
                     <ol>
-                        <li><strong>&lt;section&gt;</strong></li>
+                        <li><strong>Section Tag (&lt;section&gt;)</strong></li>
                             <ul>
                                 <li>The <strong>&lt;section class="team-container"&gt;</strong> wraps the entire content of the team page. It groups related content for better semantics, improving readability and maintainability.</li>
                             </ul>
                         <br>
-                        <li><strong>&lt;div class="team-grid"&gt;</strong></li>
+                        <li><strong>Grid Container (&lt;div class="team-grid"&gt;)</strong></li>
                             <ul>
                                 <li>A grid container that holds all the team members' cards. It provides a flexible layout for organizing team member information.</li>
                             </ul>
                         <br>
-                        <li><strong>&lt;div class="team-member"&gt;</strong></li>
+                        <li><strong>Team Member Cards (&lt;div class="team-member"&gt;)</strong></li>
                             <ul>
                                 <li>This represents each individual team member's card. Inside it, there are images and detailed information (name, role, tasks) about the member. The tabindex="0" allows the cards to be focusable for accessibility (keyboard navigation).</li>
                             </ul>
                         <br>
-                        <li><strong>&lt;h3&gt; and &lt;p&gt;</strong></li>
+                        <li><strong>Headings and Paragraphs(&lt;h3&gt; and &lt;p&gt;)</strong></li>
                             <ul>
                                 <li><strong>&lt;h3&gt;</strong> tags are used for team member names, providing a clear hierarchy of content.</li>
                                 <li><strong>&lt;p&gt;</strong> tags present additional information like the role and tasks of each member.</li>
                             </ul>
                         <br>
-                        <li><strong>&lt;a&gt;</strong></li>
+                        <li><strong>Links (&lt;a&gt;)</strong></li>
                             <ul>
                                 <li>Links used for navigation throughout the page and the footer. The links are styled to match the theme of the page and provide users with clear call-to-actions (CTA).</li>
                             </ul>
@@ -146,7 +243,7 @@
                     </ol>
 
                     <h3>Accessibility</h3>
-                    <p> The Team Page is designed with accessibility in mind to ensure a smooth and inclusive experience for all users, including those with disabilities. The following accessibility features are implemented:</p> 
+                    <p> The Team Page is designed with accessibility in mind to ensure a smooth and inclusive experience for all users, including those with disabilities.</p> 
                     <ol>
                         <li><strong>Keyboard Navigation & Focus Management</strong></li>
                             <ul>
@@ -154,11 +251,6 @@
                                     <ul>
                                         <li>All interactive elements (like team member cards and navigation links) are keyboard-accessible.</li>
                                         <li>tabindex="0" is applied to team member cards, making them focusable for users navigating via keyboard.</li>
-                                    </ul>
-
-                                <li>Skip Links:</li>
-                                    <ul>
-                                        <li>A "Skip to Main Content" link helps users jump past the menu to the main page.</li>
                                     </ul>
                                 
                                 <li>Highlighting Selected Items:</li>
@@ -171,12 +263,12 @@
                         <ul>
                             <li>Good Page Structure:</li>
                                 <ul>
-                                    <li>The page uses proper headings <strong>(&lt;h3&gt;, &lt;p&gt;)</strong> and sections <strong>(&lt;nav&gt;, &lt;footer&gt;)</strong> so screen readers can read it correctly.</li>
+                                    <li>Proper tags like <strong>&lt;sections&gt;</strong>, <strong>&lt;h3&gt;</strong>, and <strong>&lt;p&gt;</strong> are used to ensure screen readers can interpret the content.</li>
                                 </ul>
 
                             <li>Image Descriptions (Alt Text):</li>
                                 <ul>
-                                    <li>All images have descriptions so visually impaired users know what they are.</li>
+                                    <li>All images include descriptive <strong>alt</strong> text for visually impaired users.</li>
                                 </ul>
                         </ul><br>
 
@@ -272,7 +364,7 @@
  
                     <h3>Accessibility</h3>
                         <p>
-                            Explain how you used to addressed accessibility in this particular page you implemented.
+                            The Content Page is designed to be accessible to all users, including those with disabilities.
                         </p>
 
                         <ol>
@@ -330,24 +422,30 @@
 
             <section>
                 <h2 id="challenge"> Challenges and Lessons Learned</h2>
-                    <p>Detail any challenges encountered during the implementation process and explain how they were resolved. Reflect on the lessons learned from overcoming these challenges.</p> 
+                    <p>While working on the Feedback Page, Team Page, and Content Page, I faced a few challenges. One challenge was aligning and managing content effectively on the pages. I used different styling techniques like CSS Grid and Flexbox to organize the layout, and I experimented with tags like <strong>&lt;section&gt;</strong>, <strong>&lt;div&gt;</strong>, and <strong>&lt;article&gt;</strong> to structure the content properly. Another challenge was coordinating with my team, as this was a team project. To manage our work efficiently, we used version control systems like Git, which helped us track changes, avoid conflicts, and collaborate smoothly.</p>
+                    <p>From these challenges, I learned the importance of planning layouts carefully and using the right HTML tags and CSS properties to create a clean and organized design. I also gained valuable experience in teamwork and collaboration, which improved my ability to work effectively in a group setting. These experiences helped me grow as a developer and taught me the importance of clear communication and structured workflows.</p> 
             </section>
 
             <section>
                 <h2 id="compliance"> Compliance</h2>
-                    <p>Discuss how the pages you have created are compliant with Janet regulations governing web page publication. This includes demonstrating your understanding and application of these regulations. Be realistic and truthful.</p> 
+                    <p>The pages I created (Feedback Page, Team Page, and Content Page) were designed with general best practices in mind, though they were not explicitly built to comply with Janet regulations. However, I ensured that the pages follow principles that align with common web standards, including accessibility, usability, and content organization.</p>
+                    <p>For accessibility, I used semantic HTML tags like <strong>&lt;header&gt;</strong>, <strong>&lt;section&gt;</strong>, and <strong>&lt;label</strong> to structure the content logically. I also added descriptive alt text for images and ensured keyboard navigability by using focus indicators and tabindex for interactive elements. These practices make the pages more inclusive and user-friendly.</p> 
+                    <p>In terms of content organization, I used CSS Grid and Flexbox to create clean and responsive layouts. This ensures that the pages are easy to navigate and visually appealing across different devices. I also used proper headings (<strong>&lt;h1&gt;</strong>, <strong>&lt;h2&gt;</strong>, etc.) to create a clear content hierarchy, which improves readability and helps users find information quickly.</p>
+                    <p>I focused on creating a solid foundation for accessibility and usability. For full compliance with Janet regulations, additional steps like conducting accessibility audits, ensuring secure data handling, and adhering to specific guidelines would be necessary.</p>
 
                     
             </section>
 
             <section>
                 <h2 id="ref">References</h2>
-                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
-                    <ul class="ref">
-                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
-                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
-                    </ul>
+                 <ul class="ref">
+                    <li>iStock (2025) <i>iStock.</i> Available at: <a href="https://www.istockphoto.com/">https://www.istockphoto.com/</a> (Last accessed: 07 Mar 2025).</li>
+                    <li>Duckett, J. (2011) <i>HTML and CSS: Design and Build Websites.</i> John Wiley & Sons, Inc., Indianapolis.</li>
+                    <li>GitHub (2025) <i>GitHub Basics.</i> Available at: <a href="https://docs.github.com/en/get-started">https://docs.github.com/en/get-started</a> (Last accessed: 07 Mar 2025).</li>
+                    <li>MDN Web Docs (2025) <i>HTML Form Element.</i> Available at: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form</a> (Last accessed: 08 Mar 2025).</li>
+                </ul>
             </section>
+            
 
             <p class="top"><a href="#top">Go top</a></p>
         </main>
@@ -356,9 +454,8 @@
         <aside>
             <h3>Core pages developed:</h3>
 
-        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
             <ul class="top-level-ul">
-                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                
                 <li>Student 3</li>
                     <ul>
                         <li><a href="#feedback">Feedback page</a> </li>

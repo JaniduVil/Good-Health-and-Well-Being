@@ -1,212 +1,211 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Feedback Form</title>
-        <link rel="stylesheet" href="/Style.css">
-        <link rel="stylesheet" href="feedback.css">
-        <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon-32x32.png">
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="/Style.css">
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon-32x32.png">
+</head>
+<body>
 
-        <!------- Full-width Navigation Bar -------> 
-        <nav>
-            <a href="../Home/home.html">
-                <img src="../src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo">
-            </a>
-            <ul id="navbar">          
-                <li><a href="../Home/home.html">Home</a></li>
-                <li><a href="../Volunteer/Volunteer.html">Volunteer</a></li>
-                <li><a href="../Data/Data.html">Data</a></li>
-                <li><a href="../Sitemap/sitemap.html">Sitemap</a></li>
-                <li><a href="../TeamPage/team.html">Team</a></li>
-                <li><a href="../FeedbackPage/feedback.html">Feedback</a></li>
+    <!-- Full width Navigation Bar -->
+    <nav>
+        <a href="../Home/home.html">
+            <img src="../src/_Pngtree_medical_health_logo_4134836-removebg-preview.png" alt="image by pngtree" id="logo">
+        </a> 
+        <ul id="navbar">          
+            <li><a href="../Home/home.html">Home</a></li>
+            <li><a href="../Volunteer/Volunteer.html">Volunteer</a></li>
+            <li><a href="../Data/Data.html">Data</a></li>
+            <li><a href="../Sitemap/sitemap.html">Sitemap</a></li>
+            <li><a href="../TeamPage/team.html">Team</a></li>
+            <li><a href="../FeedbackPage/feedback.html">Feedback</a></li>
+        </ul>
+        
+        <div id="nav-icon">
+            <a href="../ProfilePage/profilepage.html"><img src="../src/profile-user(2).png" class="icon" alt=""></a>
+        </div>     
+    </nav>
+
+    <section class="feedback-container">
+
+        <!--Intro message-->
+        <div id="intro-message">
+            <h2>Feedback Form</h2>
+            <p>We value your feedback! Please fill out the form below.</p>
+        </div>
+
+        <!--Feedback Form-->
+        <form id="feedback-form">
+            
+            <!-- Personal Details -->
+            <fieldset>
+                <legend>Personal Details</legend>
+                
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required title="Please enter your full name">
+
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required title="Please enter a valid email address">
+                <div id="email-error" class="error-message" style="display: none;">Please enter a valid email address.</div>
+
+                <label for="phone">Telephone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter 10-digit number" title="Please enter a valid 10-digit phone number">
+                <div id="phone-error" class="error-message" style="display: none;">Please enter a valid 10-digit phone number.</div>
+                
+                <label>Preferred Contact Method</label>
+                <div class="checkbox-section">
+                    <input type="checkbox" id="contact-email" name="contact-method" value="email">
+                    <label for="contact-email">Email</label>
+            
+                    <input type="checkbox" id="contact-phone" name="contact-method" value="phone">
+                    <label for="contact-phone">Phone</label>
+            
+                    <input type="checkbox" id="contact-whatsapp" name="contact-method" value="whatsapp">
+                    <label for="contact-whatsapp">WhatsApp</label>
+                </div>
+
+                <label for="address">Address <span class="required">*</span></label>
+                <textarea id="address" name="address" rows="3" required maxlength="100" title="Max 100 characters"></textarea>
+
+                <label for="city">Your City <span class="required">*</span></label>
+                <input list="cities" id="city" name="city" required>
+                <datalist id="cities">
+                    <option value="Colombo"></option>
+                    <option value="Mount Lavinia"></option>
+                    <option value="Kesbewa"></option>
+                    <option value="Maharagama"></option>
+                    <option value="Moratuwa"></option>
+                    <option value="Ratnapura"></option>
+                    <option value="Negombo"></option>
+                    <option value="Kandy"></option>
+                    <option value="Sri Jayewardenepura Kotte"></option>
+                    <option value="Kalmunai"></option>
+                    <option value="Trincomalee"></option>
+                    <option value="Galle"></option>
+                    <option value="Jaffna"></option>
+                    <option value="Athurugiriya"></option>
+                    <option value="Weligama"></option>
+                    <option value="Matara"></option>
+                    <option value="Kolonnawa"></option>
+                    <option value="Gampaha"></option>
+                    <option value="Puttalam"></option>
+                    <option value="Badulla"></option>
+                    <option value="Kalutara"></option>
+                    <option value="Bentota"></option>
+                    <option value="Mannar"></option>
+                    <option value="Kurunegala"></option>
+                </datalist>
+
+            </fieldset>
+
+            <!-- Feedback Details -->
+            <fieldset>
+                <legend>Feedback Details</legend>
+
+                <label for="feedback-type">Feedback Type <span class="required">*</span></label>
+                <select id="feedback-type" name="feedback-type" required size = "5">
+                    <option value="" disabled>Select an option</option>
+                    <option value="bug">🐛Report a Bug</option>
+                    <option value="suggestion">💡Suggestion</option>
+                    <option value="complaint">😡 Complaint</option>
+                    <option value="praise">👏 Praise</option>
+                    <option value="inquiry">❓ Inquiry</option>
+                    <option value="feature-request">🔧 Feature Request</option>
+                    <option value="testimonial">🌟 Testimonial</option>
+                    <option value="issue">⚠️ Issue</option>
+                    <option value="general">📄General Feedback</option>
+                </select>
+
+                <label for="message">Your Feedback <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" required maxlength="200" oninput="updateMessageCounter()" title="Max 200 characters"></textarea>
+                <p id="message-counter">200 characters remaining</p>
+
+                <!-- Dropdown (Popup List) -->
+                <label for="how-hear">How Did You Hear About Us?<span class="required">*</span></label>
+                <select id="how-hear" name="how-hear" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="social-media">Social Media</option>
+                    <option value="search-engine">Search Engine</option>
+                    <option value="friend">Friend/Family</option>
+                    <option value="advertisement">Advertisement</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label>Rate Us:</label>
+                <div class="rating">
+                    <span data-rating="1">😡</span>
+                    <span data-rating="2">☹️</span>
+                    <span data-rating="3">😐</span>
+                    <span data-rating="4">😊</span>
+                    <span data-rating="5">😍</span>
+                </div>
+                Add a hidden input to store the selected rating 
+                <input type="hidden" id="rating" name="rating" value="">
+
+                <label>Are you satisfied with our service?</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="satisfaction" value="yes" required> Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="satisfaction" value="no"> No
+                    </label>
+                    <label>
+                        <input type="radio" name="satisfaction" value="neutral"> Neutral
+                    </label>
+                </div>
+                
+                <!-- Date and Time Selection -->
+                <label for="feedback-datetime">Schedule Feedback Submission</label>
+                <input type="datetime-local" id="feedback-datetime" name="feedback-datetime" required>
+
+                <!-- File Upload -->
+                <label for="screenshot">Attach a Screenshot (Optional)</label>
+                <input type="file" id="screenshot" name="screenshot" accept="image/*">
+
+            </fieldset>
+
+            <!-- Submit -->
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <!--Success message-->
+        <div id="success-message" style="display:none;" aria-live="polite">
+            <p>Feedback Submitted Successfully!</p>
+            <button class="submit-another">Submit Another Feedback</button>
+        </div>
+    </section>
+
+    <!-- footer-->
+    <div class="footer">
+        <div class="footer-column">
+            <img src="/src/Logo_of_the_United_Nations_(B&W).svg.png" alt="UN Logo" class="footer-logo">
+        </div>
+        
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/Home/home.html">Home</a></li>
+                <li><a href="/Volunteer/volunteer.html">Volunteer</a></li>
+                <li><a href="/Data/Data.html">Data</a></li>
+                <li><a href="/Sitemap/sitemap.html">Sitemap</a></li>
+                <li><a href="/FeedbackPage/feedback.html">Feedback</a></li>
+                <li><a href="/TeamPage/team.html">Team</a></li>
             </ul>
-            <div id="nav-icon">
-                <a href="../ProfilePage/profilepage.html"><img src="../src/profile-user(2).png" class="icon" alt=""></a>
-            </div>     
-        </nav>
+        </div>
 
-        <section class="feedback-container">
-
-            <!--Intro message-->
-            <div id="intro-message">
-                <h2>Feedback Form</h2>
-                <p>We value your feedback! Please fill out the form below.</p>
-            </div>
-
-            <!--Feedback Form-->
-            <form id="feedback-form">
-                
-                <!-- Personal Details -->
-                <fieldset>
-                    <legend>Personal Details</legend>
-                    
-                    <label for="name">Full Name <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required title="Please enter your full name">
-
-                    <label for="email">Email Address <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required title="Please enter a valid email address">
-
-                    <label for="phone">Telephone Number <span class="required">*</span></label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter 10-digit number" title="Please enter a valid 10-digit phone number">
-                    
-                    <label>Preferred Contact Method</label>
-                    <div class="checkbox-section">
-                        <input type="checkbox" id="contact-email" name="contact-method" value="email">
-                        <label for="contact-email">Email</label>
-                
-                        <input type="checkbox" id="contact-phone" name="contact-method" value="phone">
-                        <label for="contact-phone">Phone</label>
-                
-                        <input type="checkbox" id="contact-whatsapp" name="contact-method" value="whatsapp">
-                        <label for="contact-whatsapp">WhatsApp</label>
-                    </div>
-
-                    <label for="address">Address <span class="required">*</span></label>
-                    <textarea id="address" name="address" rows="3" required maxlength="100" title="Max 100 characters"></textarea>
-                    <!-- <p id="address-counter">100 characters remaining</p> -->
-
-                    <label for="city">Your City <span class="required">*</span></label>
-                    <input list="cities" id="city" name="city" required>
-                    <datalist id="cities">
-                        <option value="Colombo"></option>
-                        <option value="Mount Lavinia"></option>
-                        <option value="Kesbewa"></option>
-                        <option value="Maharagama"></option>
-                        <option value="Moratuwa"></option>
-                        <option value="Ratnapura"></option>
-                        <option value="Negombo"></option>
-                        <option value="Kandy"></option>
-                        <option value="Sri Jayewardenepura Kotte"></option>
-                        <option value="Kalmunai"></option>
-                        <option value="Trincomalee"></option>
-                        <option value="Galle"></option>
-                        <option value="Jaffna"></option>
-                        <option value="Athurugiriya"></option>
-                        <option value="Weligama"></option>
-                        <option value="Matara"></option>
-                        <option value="Kolonnawa"></option>
-                        <option value="Gampaha"></option>
-                        <option value="Puttalam"></option>
-                        <option value="Badulla"></option>
-                        <option value="Kalutara"></option>
-                        <option value="Bentota"></option>
-                        <option value="Mannar"></option>
-                        <option value="Kurunegala"></option>
-                    </datalist>
-
-                </fieldset>
-
-                <!-- Feedback Details -->
-                <fieldset>
-                    <legend>Feedback Details</legend>
-
-                    <label for="feedback-type">Feedback Type <span class="required">*</span></label>
-                    <select id="feedback-type" name="feedback-type" required size="5">
-                        <option value="" disabled >Select an option</option>
-                        <option value="bug">🐛Report a Bug</option>
-                        <option value="suggestion">💡Suggestion</option>
-                        <option value="complaint">😡 Complaint</option>
-                        <option value="praise">👏 Praise</option>
-                        <option value="inquiry">❓ Inquiry</option>
-                        <option value="feature-request">🔧 Feature Request</option>
-                        <option value="testimonial">🌟 Testimonial</option>
-                        <option value="issue">⚠️ Issue</option>
-                        <option value="general">📄General Feedback</option>
-                    </select>
-
-
-                    <label for="message">Your Feedback <span class="required">*</span></label>
-                    <textarea id="message" name="message" rows="5" required maxlength="200" oninput="updateMessageCounter()" title="Max 200 characters"></textarea>
-                    <p id="message-counter">200 characters remaining</p>
-
-                    <!-- Dropdown (Popup List) -->
-                    <label for="how-hear">How Did You Hear About Us?<span class="required">*</span></label>
-                    <select id="how-hear" name="how-hear" required>
-                        <option value=""disabled selected>Select an option</option>
-                        <option value="social-media">Social Media</option>
-                        <option value="search-engine">Search Engine</option>
-                        <option value="friend">Friend/Family</option>
-                        <option value="advertisement">Advertisement</option>
-                        <option value="other">Other</option>
-                    </select>
-                    
-                    
-                    <label for="rating">Rate Us:</label>
-                    <div class="rating">
-                        <span data-rating="1">😡</span>
-                        <span data-rating="2">☹️</span>
-                        <span data-rating="3">😐</span>
-                        <span data-rating="4">😊</span>
-                        <span data-rating="5">😍</span>
-                    </div>
-
-                    <label>Are you satisfied with our service?</label>
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="satisfaction" value="yes" required> Yes
-                        </label>
-                        <label>
-                            <input type="radio" name="satisfaction" value="no"> No
-                        </label>
-                        <label>
-                            <input type="radio" name="satisfaction" value="neutral"> Neutral
-                        </label>
-                    </div>
-                    
-                    <!-- Date and Time Selection -->
-                    <label for="feedback-datetime">Schedule Feedback Submission</label>
-                    <input type="datetime-local" id="feedback-datetime" name="feedback-datetime" required>
-
-                    <!-- File Upload -->
-                    <label for="screenshot">Attach a Screenshot (Optional)</label>
-                    <input type="file" id="screenshot" name="screenshot" accept="image/*">
-
-                </fieldset>
-
-                <!-- Submit -->
-                <button type="submit">Submit Feedback</button>
-            </form>
-
-            <!--Success message-->
-            <div id="success-message" style="display:none;" aria-live="polite">
-                <p>Feedback Submitted Successfully!</p>
-                <button id = "submit-another">Submit Another Feedback</button>
-            </div>
-        </section>
-
-
-        <!-- footer-->
-        <div class="footer">
-            <div class="footer-column">
-                <img src="/src/Logo_of_the_United_Nations_(B&W).svg.png" alt="UN Logo" class="footer-logo">
-            </div>
-            
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/Home/home.html">Home</a></li>
-                    <li><a href="/Volunteer/VolunteerPage.html">Volunteer</a></li>
-                    <li><a href="/Data/Data.html">Data</a></li>
-                    <li><a href="/Sitemap/sitemap.html">Sitemap</a></li>
-                    <li><a href="/FeedbackPage/feedback.html">Feedback</a></li>
-                    <li><a href="/TeamPage/team.html">Team</a></li>
-                    <li><a href="/EditorsPage/editorsPage.html">Editors</a></li>
-                </ul>
-            </div>
-
-            
-            <div class="footer-column">
-                <h3>Our Editors</h3>
-                <ul>
-                    <li><a href="/EditorsPage/editorsPage.html">Janidu Jayasundara</a></li>
-                    <li><a href="/EditorsPage/EditorsPage_ST02.html">Nirmal Ranasinghe</a></li>
-                    <li><a href="/EditorsPage/EditorsPage_ST03.html">Detuni Amaya</a></li>
-                    <li><a href="/EditorsPage/EditorsPage_ST04.html">Sandanima Wahalathanthri</a></li>
-                </ul>
-            </div>
+        <div class="footer-column">
+            <h3>Our Editors</h3>
+            <ul>
+                <li><a href="/EditorsPage/editorsPage.html">Janidu Jayasundara</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST02.html">Nirmal Ranasinghe</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST03.html">Detuni Amaya</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST04.html">Sandanima Wahalathanthri</a></li>
+            </ul>
+        </div>
 
             <div class="footer-column">
                 <h3>Validations</h3>
@@ -228,62 +227,77 @@
             </div>
         </div>
 
-        <div class="copyright">
-            <p>Copyright © . All Right Reserved. </p>
-        </div>
-        
-        <script>
-            // Character Counter for Feedback Message
-            function updateMessageCounter() {
-                const message = document.getElementById('message');
-                const counter = document.getElementById('message-counter');
-                const maxLength = message.getAttribute('maxlength');
-                const currentLength = message.value.length;
-                const remaining = maxLength - currentLength;
-                counter.textContent = `${remaining} characters remaining`;
+    <div class="copyright">
+        <p>Copyright © . All Right Reserved. </p>
+    </div>
+    
+    <script>
+        // Character Counter for Feedback Message
+        function updateMessageCounter() {
+            const message = document.getElementById('message');
+            const counter = document.getElementById('message-counter');
+            const maxLength = message.getAttribute('maxlength');
+            const currentLength = message.value.length;
+            const remaining = maxLength - currentLength;
+            counter.textContent = `${remaining} characters remaining`;
+        }
+
+        // Handle form submission
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Validate form fields
+            const email = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+            const phone = document.getElementById('phone');
+            const phoneError = document.getElementById('phone-error');
+
+            if (!email.checkValidity()) {
+                emailError.style.display = 'block';
+            } else {
+                emailError.style.display = 'none';
             }
 
-             // Handle form submission
-    document.getElementById('feedback-form').addEventListener('submit', function(event) {
-        event.preventDefault();  // Prevent the default form submission
+            if (!phone.checkValidity()) {
+                phoneError.style.display = 'block';
+            } else {
+                phoneError.style.display = 'none';
+            }
 
-        // Validate form fields
-        const form = event.target;
-        if (form.checkValidity()) {
-            
-            // Hide the form and introductory message
-            form.style.display = 'none';
-            document.getElementById('intro-message').style.display = 'none';
-            
-            // Show the success message
-            document.getElementById('success-message').style.display = 'block';
+            // If all fields are valid, submit the form
+            if (this.checkValidity()) {
+                // Hide the form and introductory message
+                this.style.display = 'none';
+                document.getElementById('intro-message').style.display = 'none';
 
-        } else {
-            // In case of validation error, you can display a message or handle accordingly
-            alert('Please fill out all required fields correctly.');
-        }
-    });
+                // Show the success message
+                document.getElementById('success-message').style.display = 'block';
+            }
+        });
 
-        // Handle "Submit another feedback button click"
-        document.getElementById("submit-another").addEventListener('click',function(){
+        // Handle "Submit another feedback" button click
+        document.querySelector('.submit-another').addEventListener('click', function() {
             // Reload the page to reset the form
             location.reload();
         });
 
+        // Handle rating emoji selection
         document.querySelectorAll('.rating span').forEach(span => {
-    span.addEventListener('click', function() {
-        // Remove the 'selected' class from all emojis
-        document.querySelectorAll('.rating span').forEach(s => s.classList.remove('selected'));
+            span.addEventListener('click', function() {
+                // Remove the 'selected' class from all emojis
+                document.querySelectorAll('.rating span').forEach(s => s.classList.remove('selected'));
 
-        // Add the 'selected' class to the clicked emoji
-        this.classList.add('selected');
+                // Add the 'selected' class to the clicked emoji
+                this.classList.add('selected');
 
-        // Optional: Store the selected rating value (e.g., for form submission)
-        const selectedRating = this.getAttribute('data-rating');
-        console.log('Selected Rating:', selectedRating);
-    });
-});
-        </script>
+                // Optional: Store the selected rating value (e.g., for form submission)
+                const selectedRating = this.getAttribute('data-rating');
+                // console.log('Selected Rating:', selectedRating);
+                document.getElementById('rating').value = selectedRating;
+            });
+        });
 
-    </body>
-    </html>
+    </script>
+
+</body>
+</html>
