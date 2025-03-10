@@ -298,6 +298,21 @@
             });
         });
 
+        // Function to format the current date and time in the required format for datetime-local
+        function getCurrentDateTime() {
+        const now = new Date();
+
+        // Adjust for timezone offset
+        const timezoneOffset = now.getTimezoneOffset() * 60000; // Convert minutes to milliseconds
+        const localTime = new Date(now - timezoneOffset);
+
+        // Format the date and time as YYYY-MM-DDTHH:MM
+        return localTime.toISOString().slice(0, 16);
+    }
+
+        // Set the value of the datetime-local input to the current date and time
+        document.getElementById('feedback-datetime').value = getCurrentDateTime();
+
     </script>
 
 </body>
