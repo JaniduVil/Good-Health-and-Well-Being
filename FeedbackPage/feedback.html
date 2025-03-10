@@ -48,11 +48,11 @@
                 <input type="text" id="name" name="name" required title="Please enter your full name">
 
                 <label for="email">Email Address <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required title="Please enter a valid email address">
+                <input type="email" id="email" name="email" required aria-describedby="email-error" title="Please enter a valid email address">
                 <div id="email-error" class="error-message" style="display: none;">Please enter a valid email address.</div>
 
                 <label for="phone">Telephone Number <span class="required">*</span></label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter 10-digit number" title="Please enter a valid 10-digit phone number">
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required aria-describedby="phone-error" placeholder="Enter 10-digit number" title="Please enter a valid 10-digit phone number">
                 <div id="phone-error" class="error-message" style="display: none;">Please enter a valid 10-digit phone number.</div>
                 
                 <label>Preferred Contact Method</label>
@@ -120,7 +120,7 @@
                 </select>
 
                 <label for="message">Your Feedback <span class="required">*</span></label>
-                <textarea id="message" name="message" rows="5" required maxlength="200" oninput="updateMessageCounter()" title="Max 200 characters"></textarea>
+                <textarea id="message" name="message" rows="5" required maxlength="200" oninput="updateMessageCounter()" title="Max 200 characters" placeholder="Enter your feedback here..."></textarea>
                 <p id="message-counter">200 characters remaining</p>
 
                 <!-- Dropdown (Popup List) -->
@@ -136,16 +136,16 @@
                 
                 <label>Rate Us:</label>
                 <div class="rating">
-                    <span data-rating="1">😡</span>
-                    <span data-rating="2">☹️</span>
-                    <span data-rating="3">😐</span>
-                    <span data-rating="4">😊</span>
-                    <span data-rating="5">😍</span>
+                    <span data-rating="1" aria-label="Rating 1: Very Dissatisfied" role="button">😡</span>
+                    <span data-rating="2" aria-label="Rating 2: Dissatisfied" role="button">☹️</span>
+                    <span data-rating="3" aria-label="Rating 3: Neutral" role="button">😐</span>
+                    <span data-rating="4" aria-label="Rating 4: Satisfied" role="button">😊</span>
+                    <span data-rating="5" aria-label="Rating 5: Very Satisfied" role="button">😍</span>
                 </div>
                 <!-- Add a hidden input to store the selected rating  -->
                 <input type="hidden" id="rating" name="rating" value="">
 
-                <label>Are you satisfied with our service?</label>
+                <label>Are you satisfied with our service?<span class="required">*</span></label>
                 <div class="radio-group">
                     <label>
                         <input type="radio" name="satisfaction" value="yes" required> Yes
@@ -201,7 +201,7 @@
         <div class="footer-column">
             <h3>Our Editors</h3>
             <ul>
-                <li><a href="/EditorsPage/editorsPage.html">Janidu Jayasundara</a></li>
+                <li><a href="/EditorsPage/EditorsPage_ST01.html">Janidu Jayasundara</a></li>
                 <li><a href="/EditorsPage/EditorsPage_ST02.html">Nirmal Ranasinghe</a></li>
                 <li><a href="/EditorsPage/EditorsPage_ST03.html">Detuni Amaya</a></li>
                 <li><a href="/EditorsPage/EditorsPage_ST04.html">Sandanima Wahalathanthri</a></li>
@@ -297,6 +297,21 @@
                 document.getElementById('rating').value = selectedRating;
             });
         });
+
+        // Function to format the current date and time in the required format for datetime-local
+    function getCurrentDateTime() {
+        const now = new Date();
+
+        // Adjust for timezone offset
+        const timezoneOffset = now.getTimezoneOffset() * 60000; // Convert minutes to milliseconds
+        const localTime = new Date(now - timezoneOffset);
+
+        // Format the date and time as YYYY-MM-DDTHH:MM
+        return localTime.toISOString().slice(0, 16);
+    }
+
+    // Set the value of the datetime-local input to the current date and time
+    document.getElementById('feedback-datetime').value = getCurrentDateTime();
 
     </script>
 
